@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="319px" height="404px" viewBox="0 0 319 404" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 58 (101010) - https://sketch.com -->
+    <title>6CA067A1-25A9-433E-9EFB-B8102C35327C</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="20.900604%" y1="12.799668%" x2="50%" y2="-21.7040543%" id="linearGradient-1">
+            <stop stop-color="#BED773" offset="0%"></stop>
+            <stop stop-color="#008085" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="8.47846972e-14 7.21254435e-13 320 0 320 404 8.47846972e-14 404"></polygon>
+        <linearGradient x1="25.07561%" y1="101.176849%" x2="32.2967731%" y2="14.7175668%" id="linearGradient-4">
+            <stop stop-color="#BED733" offset="0%"></stop>
+            <stop stop-color="#008085" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#3EC1BE" offset="0%"></stop>
+            <stop stop-color="#008085" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="WC-464-/-320px-Product-Services" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-WC-464" transform="translate(0.000000, -3735.000000)">
+            <g id="Help-~Section/320px/Support/Help" transform="translate(-1.000000, 3735.000000)">
+                <g id="Bg_Motif" transform="translate(160.000000, 202.000000) scale(-1, 1) translate(-160.000000, -202.000000) ">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="Group-5" mask="url(#mask-3)">
+                        <g transform="translate(-315.000000, -244.000000)" id="Rectangle">
+                            <polygon fill="url(#linearGradient-4)" opacity="0.851864769" points="474.105216 10.3866675 1037.85483 0 1041.64262 436.742466 1038.88895 1228.59438 305.548501 1228.59438 235.597342 757.48482"></polygon>
+                            <polygon fill="url(#linearGradient-5)" opacity="0.423409598" points="1052.37469 903.640069 234.417978 908.253224 0 909.575307 304.285904 335.340978 1078.88923 146.897154"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,57 @@
+/* Scss Mixin Document */
+/*Font Size*/ 
+@mixin fontSize($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+/* Font Family */
+$SourceSansPro: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+$uniNeue: 'uni_neue','Helvetica Neue',Helvetica,Arial,sans-serif;
+$uniNeue-Heavy:'uni_neueheavy', 'Helvetica Neue','Helvetica Extra Bold','Arial Extra Bold',sans-serif;
+
+/* Font Style */
+@mixin fontStyle($family:$SourceSansPro, $size:1.6, $weight: 400, $color: $gray700, $lh: 1.75){
+  font-family: $family;
+	@include fontSize($size);
+  color: $color;
+  font-weight: $weight;
+	line-height: $lh;
+}
+/* @media tags */
+@mixin mediaSize($size) {
+  @if $size == xs {
+    @media (min-width: 480px) { @content; }
+  } @else if $size == min-sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $size == min-md {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == min-lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $size == min-xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == max-xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == max-lg {
+    @media (min-width: 1199px) { @content; }
+  } @else if $size == max-md {
+    @media (min-width: 991px) { @content; }
+  } @else if $size == max-sm {
+    @media (min-width: 767px) { @content; }
+  } @else if $size == max-xs {
+    @media (min-width: 575px) { @content; }
+  } @else if $size == max-xss {
+    @media (min-width: 479px) { @content; 
+		}
+	}
+}
+
+@mixin alignvert() {
+	display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+   align-items: center;
+}

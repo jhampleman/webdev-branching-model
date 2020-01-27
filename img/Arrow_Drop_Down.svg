@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="5px" viewBox="0 0 10 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 56.3 (101010) - https://sketch.com -->
+    <title>32052E05-01FB-405E-80A0-BA727870B7A1</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="7 10 12 15 17 10"></polygon>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Form-Examples-2" transform="translate(-845.000000, -2066.000000)">
+            <g id="Dropdown" transform="translate(150.000000, 1883.000000)">
+                <g id="Dropdown_2" transform="translate(0.000000, 130.000000)">
+                    <g id="Form/Material/Dropdown/Open">
+                        <g id="Arrow_Drop_Down" transform="translate(700.000000, 56.000000) rotate(-180.000000) translate(-700.000000, -56.000000) translate(688.000000, 44.000000)">
+                            <polygon id="Bounds" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                            <g id="↳-🎨Color" mask="url(#mask-2)" fill="#0AA5AB">
+                                <rect id="●-Color" x="0" y="0" width="24" height="24"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

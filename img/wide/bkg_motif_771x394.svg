@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="768px" height="394px" viewBox="0 0 768 394" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 58 (101010) - https://sketch.com -->
+    <title>CBEAAAF8-9437-4419-B6D4-AFE206CBB3FB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="3.6182909%" y1="40.2852752%" x2="50%" y2="31.2747597%" id="linearGradient-1">
+            <stop stop-color="#BED773" offset="0%"></stop>
+            <stop stop-color="#008085" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="2.0427813e-13 7.03401603e-13 771 0 771 394 2.0427813e-13 394"></polygon>
+        <linearGradient x1="13.0695363%" y1="101.176849%" x2="23.7691323%" y2="14.7175668%" id="linearGradient-4">
+            <stop stop-color="#BED733" offset="0%"></stop>
+            <stop stop-color="#008085" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#3EC1BE" offset="0%"></stop>
+            <stop stop-color="#008085" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="WC-463-/-768px-Product-Services" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-WC-463" transform="translate(0.000000, -3045.000000)">
+            <g id="Group">
+                <g id="Support" transform="translate(0.000000, 3045.000000)">
+                    <g id="Bg_Motif" transform="translate(385.500000, 197.000000) scale(-1, 1) translate(-385.500000, -197.000000) ">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                        <g id="Group-5" mask="url(#mask-3)">
+                            <g transform="translate(-439.000000, -232.000000)" id="Rectangle">
+                                <polygon fill="url(#linearGradient-4)" opacity="0.851864769" points="681.498786 12.2655342 1491.8562 0 1497.30093 515.745757 1493.34269 1450.83748 439.208272 1450.83748 338.657532 894.50789"></polygon>
+                                <polygon fill="url(#linearGradient-5)" opacity="0.423409598" points="1512.72766 1067.10148 336.962264 1072.54912 0 1074.11036 437.393362 396.001534 1550.84078 173.469699"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

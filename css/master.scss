@@ -1,0 +1,4956 @@
+// Variables Imports
+@import 'vcolor';
+@import 'vcore';
+
+//@import '../../aem-components/radio-chkbox/styles.scss';
+
+/*$mdc-theme-primary: $teal600;
+$mdc-theme-secondary: #d1c4e9;
+$mdc-theme-background: #fdf6f9;
+
+Other colors to consider adding to vcolor.scss:
+
+#FF4747
+#e8f5f5
+
+*/
+/*	Mixing key - vars
+	1. Sets Font-Family 
+		a) $SourceSansPro
+		b) $uniNeue
+		c) $uniNeue-Heavy 
+	2. All the color in the color palette set in DSG 2.2 are avariable. The color variables are setup takeing the color name and add a $ infront; i.e. $gray700 = $gray700 and $teal500 = $tealextra1
+
+*/
+/* Mixing key - Mixin's and functions
+
+	1. font-size(1.6) : returns font-size: 16px; font-size: 1.6rem; font-size: 1em;
+	2. fontStyle(family, size, weight, color, line-height) creates a full styled font. 
+			The default values are($family:$SourceSansPro, $size:1.6, $weight: 400, $color:$gray700, $lh: 1.75)
+			here are some examples how to use it 
+					@include fontStyle();
+					@include fontStyle(arial,1.4,$lh:1);
+					@include fontStyle($size:2.2);
+					@include fontStyle($weight:400,$color: $gray100);
+*/
+
+/* START ***** GLOBAL CSS */
+/* Scss Document */
+:root {
+	font-size: 62.5%;
+  body {
+		@include fontStyle();
+  }
+}
+
+:root body {
+  font-family: $SourceSansPro;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: $gray700;
+  font-weight: 400;
+  line-height: 1.75; 
+}
+
+body {margin:0;}
+
+/* START - Grid Layout */
+
+.outer-wrapper {
+  max-width: 1920px;
+  margin: 0px auto;
+}
+
+
+.inner-wrapper {
+  max-width: 1200px;
+  margin: 0px auto;
+  box-sizing: border-box; 
+  
+  @media (max-width: 1199px) {
+      max-width: 768px;
+  }
+  
+  @media (max-width: 767px) {
+      max-width: 100%; 
+  }
+}
+
+.mdc-layout-grid {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+
+/* END - Grid Layout */
+
+/* END ***** GLOBAL CSS */
+
+
+
+
+/* END ***** AEM Components - Typography - Sprint 0 - https://jira.viasat.com/browse/WEBCON-881  */
+
+/* Start Typography */
+
+.display {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue, $size:6, $weight: 300, $color:$gray800, $lh: 72px);
+}
+
+h1,.h1{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue, $size:4,$color:$gray800, $lh: 50px); 
+  	letter-spacing: 0.25px;
+}
+
+h1.heavy, .h1.heavy{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy, $size:4,$color:$gray800, $lh: 50px); 
+  	letter-spacing: 0.25px;	
+}
+
+h1.fontspro, .h1.fontspro {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro, $size:4,$color:$gray800, $lh: 50px);
+}
+
+h2,.h2{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue,$size:3.2,$color:$gray800,$lh:40px);
+  	letter-spacing: 0.25px;
+}
+
+h2.heavy, .h2.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy,$size:3.2,$color:$gray800,$lh:40px);
+	letter-spacing: 0.25px;
+}
+
+h2.fontspro.light, .h2.fontspro.light {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:3.2,$weight:200,$color:$gray800,$lh:40px);
+	letter-spacing: 0.25px;
+}
+
+h2.fontspro.heavy, .h2.fontspro.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:3.2,$weight:800,$color:$gray800,$lh:40px);
+	letter-spacing: 0.25px;
+}
+
+h3,.h3{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue,$size:2.8,$color:$gray800,$lh:35px);
+}
+
+h3.heavy, .h3.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy,$size:2.8,$color:$gray800,$lh:35px);
+}
+
+h3.fontspro.light, .h3.fontspro.light {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:2.8,$weight:200,$color:$gray800,$lh:35px);
+}
+
+h3.fontspro.heavy, .h3.fontspro.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:2.8,$weight:800,$color:$gray800,$lh:35px);
+}
+
+h4,.h4{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue,$size:2.4,$color:$gray800,$lh:28px);
+}
+
+h4.heavy, .h4.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy,$size:2.4,$color:$gray800,$lh:28px);
+}
+
+h4.fontspro.light, .h4.fontspro.light {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:2.4,$weight:200,$color:$gray800,$lh:28px);
+}
+
+h4.fontspro.heavy, .h4.fontspro.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:2.4,$weight:800,$color:$gray800,$lh:28px);
+}
+
+h5,.h5{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue,$size:1.6,$color:$gray800,$lh:18px);
+	  letter-spacing: 0.44px;
+	  text-transform: uppercase;
+}
+
+h5.heavy, .h5.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy,$size:1.6,$color:$gray800,$lh:18px);
+	letter-spacing: 0.44px;
+	text-transform: uppercase;
+}
+
+h5.fontspro, .h5.fontspro {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.6,$weight:200,$color:$gray800,$lh:18px);
+	letter-spacing: 0.44px;
+	text-transform: uppercase;
+}
+
+h5.fontspro.heavy, .h5.fontspro.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.6,$weight:800,$color:$gray800,$lh:18px);
+	letter-spacing: 0.44px;
+	text-transform: uppercase;
+}
+
+h6,.h6{
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue,$size:1.4,$color:$gray800,$lh:18px);
+	  letter-spacing: 0.5px;
+	  text-transform: uppercase;
+}
+
+h6.heavy, .h6.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy,$size:1.4,$color:$gray800,$lh:18px);
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+h6.fontspro, .h6.fontspro {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.4,$weight:200,$color:$gray800,$lh:18px);
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+h6.fontspro.heavy, .h6.fontspro.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.4,$weight:800,$color:$gray800,$lh:18px);
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.lead.fontspro {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro, $size:2.2, $weight:200,$color:$gray800, $lh: 31px);
+}
+
+.lead.fontspro.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro, $size:2.2, $weight:800,$color:$gray800, $lh: 31px);
+}
+	  
+.lead.fontuni {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue, $size:2.2, $color:$gray800, $lh: 31px);
+}
+
+.lead.fontuni.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$uniNeue-Heavy, $size:2.2, $color:$gray800, $lh: 31px);
+}
+
+.large {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:2.0,$weight:200,$color:$gray800,$lh:28px);
+}
+
+.large.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:2.0,$weight:600,$color:$gray800,$lh:28px);
+}
+
+p {margin:0;padding:0;}
+
+.small {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.4,$weight:300,$color:$gray800,$lh:18px);
+}
+
+.small.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.4,$weight:600,$color:$gray800,$lh:18px);
+}
+
+.caption {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.2,$weight:300,$color:$gray800,$lh:14px);
+}
+
+.caption.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.2,$weight:800,$color:$gray800,$lh:14px);
+}
+
+.tiny {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.0,$weight:300,$color:$gray800,$lh:12px);
+}
+
+.tiny.heavy {
+	margin: 0;padding: 0;
+	@include fontStyle($family:$SourceSansPro,$size:1.0,$weight:800,$color:$gray800,$lh:12px);
+}
+
+/* End Typography */
+
+@media only screen and (max-width:575px){
+	/* Typography on width less than 576px */
+	.display {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue, $size:4.8, $weight: 300, $color:$gray800, $lh: 45px);
+		letter-spacing:.2;
+	}
+	
+	h1,.h1{
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue, $size:3.2,$color:$gray800, $lh: 41px); 
+		  letter-spacing: 0.2px;
+	}
+	
+	h1.heavy, .h1.heavy{
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue-Heavy, $size:3.2,$color:$gray800, $lh: 41px); 
+		  letter-spacing: 0.2px;	
+	}
+	
+	h1.fontspro, .h1.fontspro {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro, $size:3.2,$color:$gray800, $lh: 41px);
+	}
+	
+	h2,.h2{
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue,$size:2.6,$color:$gray800,$lh:32px);
+		  letter-spacing: 0.2px;
+	}
+	
+	h2.heavy, .h2.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue-Heavy,$size:2.6,$color:$gray800,$lh:32px);
+		letter-spacing: 0.2px;
+	}
+	
+	h2.fontspro.light, .h2.fontspro.light {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro,$size:2.6,$weight:200,$color:$gray800,$lh:32px);
+		letter-spacing: 0.2px;
+	}
+	
+	h2.fontspro.heavy, .h2.fontspro.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro,$size:2.6,$weight:800,$color:$gray800,$lh:32px);
+		letter-spacing: 0.2px;
+	}
+	
+	h3,.h3{
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue,$size:2.4,$color:$gray800,$lh:32px);
+		  letter-spacing: 0.2px;
+	}
+	
+	h3.heavy, .h3.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue-Heavy,$size:2.4,$color:$gray800,$lh:32px);
+		letter-spacing: 0.2px;
+	}
+	
+	h3.fontspro.light, .h3.fontspro.light {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro,$size:2.4,$weight:200,$color:$gray800,$lh:32px);
+		letter-spacing: 0.2px;
+	}
+	
+	h3.fontspro.heavy, .h3.fontspro.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro,$size:2.4,$weight:800,$color:$gray800,$lh:32px);
+		letter-spacing: 0.2px;
+	}
+	
+	h4,.h4{
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue,$size:1.8,$color:$gray800,$lh:21px);
+	}
+	
+	h4.heavy, .h4.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue-Heavy,$size:1.8,$color:$gray800,$lh:21px);
+	}
+	
+	h4.fontspro.light, .h4.fontspro.light {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro,$size:1.8,$weight:200,$color:$gray800,$lh:21px);
+	}
+	
+	h4.fontspro.heavy, .h4.fontspro.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro,$size:1.8,$weight:800,$color:$gray800,$lh:21px);
+	}
+
+	.lead.fontspro {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro, $size:2, $weight:200,$color:$gray800, $lh: 31px);
+	}
+	
+	.lead.fontspro.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$SourceSansPro, $size:2, $weight:800,$color:$gray800, $lh: 31px);
+	}
+		  
+	.lead.fontuni {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue, $size:2, $color:$gray800, $lh: 31px);
+	}
+	
+	.lead.fontuni.heavy {
+		margin: 0;padding: 0;
+		@include fontStyle($family:$uniNeue-Heavy, $size:2, $color:$gray800, $lh: 31px);
+	}
+}
+
+
+a{ 
+	&.vlnk {
+		color: $blue600;text-decoration: underline;
+		&:hover,
+		&:focus{color: $blue600;text-decoration: none;}
+		&:focus  {outline: 0}
+		&:visited {color: $blue700;}
+	}
+}
+
+ul.vbullet {
+  margin: 0 0 1rem;
+  padding: 0;
+}
+ul.vbullet li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 1em;
+    /*font-size:30px;*/
+  }
+ul.vbullet li:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .65em;
+      width: .5em;
+      height: .5em;
+      background-color: $teal500;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+}
+
+/* Colors */
+.viasatwhite {color:$viasatwhite !important;}
+
+@include mediaSize(min-lg){
+
+}
+
+/* END ***** AEM Components - Typography - Sprint 0 */
+
+/* START ***** AEM Components - Buttons - Sprint 0 - https://jira.viasat.com/browse/WEBCON-884 */
+
+.mdc-button.vbtn {
+  margin: 10px;
+  height: auto;
+  padding:8px 35px;
+  font-family:$SourceSansPro ;
+  font-size: 1.6rem;	
+  font-weight: 600;	
+  letter-spacing: 0.09rem;	
+  line-height: 1.8rem;	
+  text-align: center;
+  color:$viasatwhite;
+  background-color: $teal500; 
+  border-radius: 25px;
+  margin: 0px;
+  
+  /*
+  .mdc-button__label {
+      z-index: 10;
+  }
+  */
+  
+
+  &:hover {
+      background-color:$teal600;
+  }
+  
+
+  &:active {
+       background-color:$teal700;
+  }
+  
+  
+
+   &:focus {
+      background-color: $teal700;
+  }
+  
+  &:disabled {
+      opacity: 0.3;
+  }
+  
+  
+  &.vbtn-large {
+      font-size: 1.8rem;	
+      letter-spacing: .1rem;	
+      font-weight: normal;
+      padding:10px 40px ;//11px 40px 9px 40px;
+  } 
+  
+  &.vbtn-small {
+      font-size: 1.4rem;	
+      font-weight: 600;	
+      letter-spacing: 0.08rem;	
+      padding:5px 30px;
+      
+  }
+  
+  
+  &.vbtn-primay-teal {
+      color:$viasatwhite;
+      background-color: $teal500; 
+      
+      &:hover {
+          background-color:$teal600;
+      }
+      
+      &:active {
+          background-color:$teal700;
+      }
+      
+      &:focus {
+          background-color: $teal700;
+      }
+   
+      
+      &.vbtn-dark {
+          color:$gray800;
+          background-color: $teal400; 
+
+          &:hover {
+              background-color:$teal300;
+          }
+
+          &:active {
+              background-color:$teal200;
+          }
+
+          &:focus {
+              background-color: $teal200;
+          }
+         
+          &:disabled {
+              
+                  background-color: $gray500;
+                  color:$gray800;
+                  opacity: 1;
+              
+          }
+          
+      }
+      
+       &.vbtn-light {
+          color:$teal500;
+          background-color: $viasatwhite; 
+
+          &:hover {
+              color:$teal600;
+              background-color:$viasatwhite;
+          }
+
+          &:active {
+              color:$teal700;
+              background-color:$viasatwhite;
+          }
+
+          &:focus {
+              color:$teal700;
+              background-color: $viasatwhite;
+          }
+          
+          &:disabled {
+              background-color:rgba(255,255,255,0.50);
+              color:$teal700;
+              opacity: 1;
+           }
+          
+      }
+  }
+  
+  &.vbtn-primay-blue {
+      color:$viasatwhite;
+      background-color: $blue500; 
+      
+      &:hover {
+          background-color:$blue600;
+       }
+      
+      &:active {
+          background-color:$blue700;
+      }
+      
+      &:focus {
+          background-color: $blue700;
+      }
+      
+      &.vbtn-dark {
+          color:$gray800;
+          background-color: $blue400; 
+
+          &:hover {
+              background-color:$blue300;
+          }
+
+          &:active {
+              background-color:$blue200;
+          }
+
+          &:focus {
+              background-color: $blue200;
+          }
+          
+          &:disabled {
+              background-color: $gray500;
+              color:$gray800;
+              opacity: 1;
+           }
+          
+      }
+      
+      &.vbtn-light {
+          color:$blue500;
+          background-color: $viasatwhite; 
+
+          &:hover {
+              color:$blue600;
+              background-color:$viasatwhite;
+          }
+
+          &:active {
+              color:$blue700;
+              background-color:$viasatwhite;
+          }
+
+          &:focus {
+              color:$blue700;
+              background-color: $viasatwhite;
+          }
+
+          &:disabled {
+              
+                  background-color:rgba(255,255,255,0.50);
+                  color:$blue700;
+                  opacity: 1;
+              
+          }
+          
+      }
+  }
+  
+  &.vbtn-primay-green {
+      color:$viasatwhite;
+      background-color: $green500; 
+      
+      &:hover {
+          background-color:$green600;
+       }
+      
+      &:active {
+          background-color:$green700;
+      }
+      
+      &:focus {
+          background-color: $green700;
+      }
+      
+      &.vbtn-dark {
+          color:$gray800;
+          background-color: $green400; 
+
+          &:hover {
+              background-color:$green300;
+           }
+
+          &:active {
+              background-color:$green200;
+          }
+
+          &:focus {
+              background-color: $green200;
+          }
+          
+          &:disabled {
+              
+              background-color: $gray500;
+              color:$gray800;
+              opacity: 1;
+              
+          }
+          
+      }
+      
+      &.vbtn-light {
+          color:$green500;
+          background-color: $viasatwhite; 
+
+          &:hover {
+              color:$green600;
+              background-color:$viasatwhite;
+          }
+
+          &:active {
+              color:$green700;
+              background-color:$viasatwhite;
+          }
+
+          &:focus {
+              color:$green700;
+              background-color: $viasatwhite;
+          }
+
+          
+          &:disabled {
+              
+              background-color:rgba(255,255,255,0.50);
+              color:$green700;
+              opacity: 1;
+              
+          }
+          
+      }
+  } 
+  
+  
+  &.mdc-button--outlined {
+      
+      background-color: transparent;
+      color:$teal500;
+      padding:7px 34px;
+      border-color: $teal500;
+      
+
+      &:hover {
+          border-color: $teal600;
+          color:$teal600;
+          background-color:transparent;
+          border-width: 2px;
+          padding:6px 33px;
+      }
+      
+      &:active {
+          border-color: $teal700;
+          color:$teal700;
+          background-color:transparent;
+
+      }
+      
+
+      &:focus {
+           border-color: $teal700;
+           color:$teal700;
+           border-width: 2px;
+           padding:6px 33px;
+           background-color:transparent;
+      }
+    
+      
+      &.vbtn-large {  
+          padding:9px 39px;//11px 40px 9px 40px;
+          
+          &:hover {                
+              padding:8px 38px;
+          }
+          
+          &:focus {                
+              padding:8px 38px;
+          }
+      } 
+
+      &.vbtn-small {
+
+          padding:4px 29px ;
+          
+          &:hover {
+              padding:3px 28px;
+          }
+          &:focus {                
+              padding:3px 28px;
+          }
+
+      }
+      
+      
+      &.vbtn-outline-teal {
+          
+          color:$teal500;
+          border-color: $teal500;
+          
+          &:hover {
+              border-color: $teal600;
+              color:$teal600;
+          }
+      
+          &:active {
+              border-color: $teal700;
+              color:$teal700;
+          }
+          
+          
+          &:focus {
+              border-color: $teal700;
+              color:$teal700;              
+            
+          }
+         
+          
+          &.vbtn-dark {
+
+              color:$teal400;
+              border-color: $teal400;
+
+              &:hover {
+                  border-color: $teal300;
+                  color:$teal300;
+              }
+
+              &:active {
+                  border-color: $teal200;
+                  color:$teal200;
+              }
+
+
+              &:focus {
+                  border-color: $teal200;
+                  color:$teal200;              
+
+              }
+
+              &:disabled {
+
+                  border-color: $gray500;
+                  color:$gray500;
+                  opacity: 1;
+
+              }
+          
+          }
+          
+          &.vbtn-light {
+              color:$viasatwhite;
+              border-color: $viasatwhite;
+
+              &:hover {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;
+              }
+
+              &:active {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;
+                  border-width: 1px;
+                  padding:7px 34px; 
+                  
+                  &.vbtn-large {
+                      padding: 9px 39px;
+                  }
+                  
+                  &.vbtn-small {
+                      padding: 4px 29px;
+                  }
+              }
+
+
+               &:focus {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;              
+
+              }
+
+              &:disabled {
+
+                    border-color: $viasatwhite;
+                    color:$viasatwhite;
+                    border-width: 2px;
+                    opacity: .5;
+                    padding:6px 33px; 
+
+                    &.vbtn-large {
+                        padding: 8px 38px;
+                    }
+
+                    &.vbtn-small {
+                        padding: 3px 28px;
+                    }
+              }
+              
+              
+          }
+          
+      }
+      
+      &.vbtn-outline-blue {
+          
+          color:$blue500;
+          border-color: $blue500;
+          
+          &:hover {
+              border-color: $blue600;
+              color:$blue600;
+          }
+      
+          &:active {
+              border-color: $blue700;
+              color:$blue700;
+          }
+          
+          
+           &:focus {
+              border-color: $blue700;
+              color:$blue700;              
+
+          }
+          
+          &.vbtn-dark {
+
+              color:$blue400;
+              border-color: $blue400;
+
+              &:hover {
+                  border-color: $blue300;
+                  color:$blue300;
+              }
+
+              &:active {
+                  border-color: $blue200;
+                  color:$blue200;
+              }
+
+
+              &:focus {
+                  border-color: $blue200;
+                  color:$blue200;              
+
+              }
+
+              &:disabled {
+
+                  border-color: $gray500;
+                  color:$gray500;
+                  opacity: 1;
+
+              }
+          
+          }
+          
+          &.vbtn-light {
+              color:$viasatwhite;
+              border-color: $viasatwhite;
+
+              &:hover {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;
+              }
+
+              &:active {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;
+                  border-width: 1px;
+                  padding:7px 34px; 
+                  
+                  &.vbtn-large {
+                      padding: 9px 39px;
+                  }
+                  
+                  &.vbtn-small {
+                      padding: 4px 29px;
+                  }
+              }
+
+
+               &:focus {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;              
+
+              }
+
+              &:disabled {
+
+                    border-color: $viasatwhite;
+                    color:$viasatwhite;
+                    border-width: 2px;
+                    opacity: .5;
+                    padding:6px 33px; 
+
+                    &.vbtn-large {
+                        padding: 8px 38px;
+                    }
+
+                    &.vbtn-small {
+                        padding: 3px 28px;
+                    }
+              }
+              
+              
+          }
+          
+      }
+      
+      &.vbtn-outline-green {
+          
+          color:$green500;
+          border-color: $green500;
+          
+          &:hover {
+              border-color: $green600;
+              color:$green600;
+          }
+      
+          &:active {
+              border-color: $green700;
+              color:$green700;
+          }
+          
+          
+           &:focus {
+              border-color: $green700;
+              color:$green700;              
+          }
+          
+          &.vbtn-dark {
+
+              color:$green400;
+              border-color: $green400;
+
+              &:hover {
+                  border-color: $green300;
+                  color:$green300;
+              }
+
+              &:active {
+                  border-color: $green200;
+                  color:$green200;
+              }
+
+
+               &:focus {
+                  border-color: $green200;
+                  color:$green200;              
+
+              }
+
+              &:disabled {
+
+                  border-color: $gray500;
+                  color:$gray500;
+                  opacity: 1;
+
+              }
+          
+          }
+          
+          &.vbtn-light {
+              color:$viasatwhite;
+              border-color: $viasatwhite;
+
+              &:hover {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;
+              }
+
+              &:active {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;
+                  border-width: 1px;
+                  padding:7px 34px; 
+                  
+                  &.vbtn-large {
+                      padding: 9px 39px;
+                  }
+                  
+                  &.vbtn-small {
+                      padding: 4px 29px;
+                  }
+              }
+
+
+              &:focus {
+                  border-color: $viasatwhite;
+                  color:$viasatwhite;              
+
+              }
+
+              &:disabled {
+
+                    border-color: $viasatwhite;
+                    color:$viasatwhite;
+                    border-width: 2px;
+                    opacity: .5;
+                    padding:6px 33px; 
+
+                    &.vbtn-large {
+                        padding: 8px 38px;
+                    }
+
+                    &.vbtn-small {
+                        padding: 3px 28px;
+                    }
+              }
+              
+              
+          }
+          
+      }
+      
+  }
+  
+  &.mdc-button--text {
+      
+      background-color: transparent;
+      color:$teal500;
+
+      
+      &:hover {
+          color:$teal600;
+          background-color:$gray100;
+
+      }
+      
+      &:active {
+          color:$teal700;
+          background-color:$gray200;
+      }
+      
+      &:focus {
+
+          color:$teal700;
+          background-color:$gray200;
+              
+      }
+      
+
+      &.vbtn-dark {
+          &:hover {
+              
+              background-color:$gray700;
+              
+          }
+          &:active {
+
+              background-color:$gray600;
+
+          }
+
+          &:focus {
+
+              background-color:$gray600;
+
+          }
+
+      }
+      
+      &.vbtn-light {
+          &:hover{
+              
+              background-color:rgba(255,255,255,0.20);
+          
+          }
+          &:active {
+
+              background-color:rgba(255,255,255,0.30);
+
+          }
+          &:focus {
+
+              background-color:rgba(255,255,255,0.30);
+
+          }
+
+      }
+      
+
+     
+      
+       &.vbtn-text-teal {
+           
+           color:$teal500;
+           
+           &:hover {
+
+              color:$teal600;
+
+          }
+
+          &:active {
+
+              color:$teal700;
+
+          }
+
+          &:focus {
+
+              color:$teal700;
+
+          }
+
+           &.vbtn-dark {
+
+              color:$teal400;
+           
+               &:hover {
+
+                  color:$teal300;
+
+              }
+
+              &:active {
+
+                  color:$teal200;
+
+              }
+
+              &:focus {
+
+                  color:$teal200;
+
+              }
+
+              &:disabled {
+                  
+                  color:$gray500;
+                  opacity: 1;
+
+              }
+          
+          }
+           
+           &.vbtn-light {
+
+              color:$viasatwhite;
+           
+               &:hover {
+
+                  color:$viasatwhite;
+
+              }
+
+              &:active {
+
+                  color:$viasatwhite;
+
+              }
+
+              &:focus {
+
+                  color:$viasatwhite;
+
+              }
+
+
+              &:disabled {
+                  
+                      color:$viasatwhite;
+                      opacity: .5;
+
+              }
+          
+          }
+      }
+      
+      &.vbtn-text-blue {
+           
+           color:$blue500;
+           
+           &:hover {
+
+              color:$blue600;
+
+          }
+
+          &:active {
+
+              color:$blue700;
+
+          }
+           
+          &:focus {
+
+               color:$blue700;
+
+          }
+
+          &.vbtn-dark {
+
+              color:$blue400;
+           
+               &:hover {
+
+                  color:$blue300;
+
+              }
+
+              &:active {
+
+                  color:$blue200;
+
+              }
+
+              &:focus {
+
+                  color:$blue200;
+
+              }
+             
+
+              &:disabled {
+                  
+                      color:$gray500;
+                      opacity: 1;
+
+              }
+          
+          }
+          
+          &.vbtn-light {
+
+              color:$viasatwhite;
+           
+               &:hover {
+
+                  color:$viasatwhite;
+
+              }
+
+              &:active {
+
+                  color:$viasatwhite;
+
+              }
+
+              &:focus {
+
+                  color:$viasatwhite;
+
+              }
+             
+
+              &:disabled {
+                  
+                  color:$viasatwhite;
+                  opacity: .5;
+
+              }
+          
+          }
+      }
+      
+      &.vbtn-text-green {
+           
+           color:$green500;
+           
+           &:hover {
+
+              color:$green600;
+
+          }
+
+          &:active {
+
+              color:$green700;
+
+          }
+           
+          &:focus {
+
+               color:$green700;
+
+          }
+      
+          
+          &.vbtn-dark {
+
+              color:$green400;
+           
+               &:hover {
+
+                  color:$green300;
+
+              }
+
+              &:active {
+
+                  color:$green200;  
+
+              }
+
+              &:focus {
+
+                   color:$green200;
+
+              }
+            
+
+              &:disabled {
+                  
+                  color:$gray500;
+                  opacity: 1;
+
+              }
+          
+          }
+          
+          &.vbtn-light {
+
+              color:$viasatwhite;
+           
+               &:hover {
+
+                  color:$viasatwhite;
+
+              }
+
+              &:active {
+
+                  color:$viasatwhite;
+
+              }
+
+              &:focus {
+
+                  color:$viasatwhite;
+
+              }
+           
+
+              &:disabled {
+                  
+                  color:$viasatwhite;
+                  opacity: .5;
+
+              }
+          
+          }
+      }
+      
+  }
+  
+  
+}
+
+.vdark-bkg {
+  background: $viasatgrey;
+  padding: 25px;
+  h1, h2, h3 {
+      color:$viasatwhite;
+  }
+}
+
+.teal-bkg {
+  background: $teal600;
+  padding: 25px;
+  h1, h2, h3 {
+      color:$viasatwhite;
+  }
+}
+
+/* END ***** AEM Components - Buttons - Sprint 0 */
+
+
+
+/* START ***** AEM Components - Text styles - CTA & links  - Sprint 0 - https://jira.viasat.com/browse/WEBCON-883 */
+
+
+
+a.vlnk {
+  color: $blue600;
+  text-decoration: underline; 
+}
+a.vlnk:hover, a.vlnk:focus {
+  color: $blue600;
+  text-decoration: none; 
+}
+a.vlnk:focus {
+  outline: 0; 
+}
+a.vlnk:visited {
+	color: $blue600; 
+}
+
+/* Primary nav */
+a.vlnk {
+	@include fontStyle($family:$SourceSansPro, $size:1.4, $color:$gray800, $lh: 28px);
+	
+	&.primary-nav {
+		@include fontStyle($family:$uniNeue, $size:1.4, $color:$gray800, $lh: 15px);
+		text-decoration: none;
+		letter-spacing:.5;
+		text-transform: uppercase;
+		&.selected {
+			@include fontStyle($family:$uniNeue-Heavy, $size:1.4, $color:$gray800, $lh: 15px);
+		}
+	}
+	
+	&.mega-menu {
+		@include fontStyle($family:$SourceSansPro, $size:1.4, $weight:600,$color:$gray800, $lh: 14px);
+		text-decoration: none;
+		letter-spacing:.4px;
+		text-transform: uppercase;
+		&.selected {
+			@include fontStyle($family:$SourceSansPro, $size:1.6, $weight:600,$color:$gray700, $lh: 24px);
+			text-transform:none;
+			letter-spacing: -.1px;
+		}
+	}
+	
+	&.active {
+		font-weight: bold;
+	}
+	
+}
+
+/* Form Messages */
+.form {
+	margin:0;
+	padding:0;
+		
+	&.hint {
+		@include fontStyle($family:$SourceSansPro, $size:1.8, $color:$gray400, $lh: 15px);
+	}
+	
+	&.hint-filled {
+		@include fontStyle($family:$SourceSansPro, $size:1.3, $color:$gray700, $lh: 15px);
+	}
+	
+	&.material-dropdown {
+		@include fontStyle($family:$SourceSansPro, $size:1.6, $color:$gray400, $lh: 15px);
+		font-style:italic;
+	}
+}
+
+/* Form Messages */
+.vbtn-cta {
+	text-transform: uppercase;
+	text-decoration:none;
+	background-color:$grayextra1;
+	display:inline-block;
+	text-align:center;
+	width:128px;height:41px;
+
+	&.large {
+		@include fontStyle($family:$SourceSansPro, $size:1.8, $color:$viasatwhite, $lh: 41px);
+		letter-spacing: 1px;
+	}
+	
+	&.medium {
+		@include fontStyle($family:$SourceSansPro, $size:1.6, $color:$viasatwhite, $lh: 41px);
+		letter-spacing: .9px;
+	}
+	
+	&.small {
+		@include fontStyle($family:$SourceSansPro, $size:1.4, $color:$viasatwhite, $lh: 41px);
+		letter-spacing: .8px;
+	}
+}
+
+.clearfix {
+  overflow: auto; 
+}
+
+.nbsp {
+  $viasatwhite-space: nowrap; 
+}
+
+.full-content {
+  margin: 0 auto;
+  max-width: 1440px; 
+}
+
+.vcontent {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1440px; 
+}
+
+/* END ***** AEM Components - Text styles - CTA & links  - Sprint 0 */
+
+/* START ***** AEM Components - Checkboxes  - Sprint 0 - https://jira.viasat.com/browse/WEBCON-890 */
+
+.mdc-checkbox.vchkbox {
+
+  &::before, &::after {
+      display: none;
+  }
+  .mdc-checkbox__background {
+       width: 24px;
+       height: 24px;
+       border-radius: 4px;
+       
+       &::before {
+          display: none;
+    }
+    .mdc-checkbox__checkmark {
+      .mdc-checkbox__checkmark-path {
+        transform-origin: center center;
+        transform: scale(0.5);
+      }		   
+    }
+  }
+
+  //not checked
+  .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background  {
+      border-color: $gray500;
+      border-width: 1px;
+      .mdc-checkbox__checkmark {
+         color: $viasatblack;
+      }
+  }
+  &:hover {
+      .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background {
+          border-color: $teal500;
+          border-width: 2px;
+      }
+  }
+  //checked
+  .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background  {
+       border-color: $viasatblack;
+       border-width: 1px;
+       background-color: $viasatwhite;
+       .mdc-checkbox__checkmark {
+         color: $viasatblack;
+       }
+  }
+  //tabbing
+  .mdc-checkbox__native-control:enabled:not(:checked):focus  {
+      border-color: $teal500;
+      border-width: 1px;
+      .mdc-checkbox__checkmark {
+         color: $viasatblack;
+      }
+  }
+
+  .mdc-checkbox__native-control:enabled:focus~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:focus indeterminate~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:focus:not(:indeterminate)~.mdc-checkbox__background {
+       border-color: $teal500;
+       .mdc-checkbox__checkmark {
+         color: $teal500;
+       }
+  }
+
+}
+
+//disabled
+.mdc-checkbox--disabled {
+ .mdc-checkbox.vchkbox {
+    border-width: 1px;
+    opacity: 0.3;
+ }
+}
+
+//labels
+.mdc-form-field {
+
+ label {
+   margin-top: 3px;
+   color: $gray700;	
+   font-family: "Source Sans Pro";	
+   font-size: 1.6rem;	
+   line-height: 2.8rem;
+ }
+//disabled	
+ label.disabled-label {
+   opacity: 0.3;
+    }
+}
+
+/* END ***** AEM Components - Checkboxes  - Sprint 0 */
+
+/* START ***** AEM Components - Radio Buttons - Sprint 0 - https://jira.viasat.com/browse/WEBCON-887 */
+
+.mdc-radio {
+  &::before, &::after {
+      display: none;
+  }
+  .mdc-radio__background {
+    width: 24px;
+    height: 24px;
+    &::before {
+     display: none; 
+    }
+  }
+  //not checked
+  .mdc-radio__native-control:enabled:not(:checked)  {
+      border-color: $gray500;
+      border-width: 1px;
+  }
+  .mdc-radio__background .mdc-radio__outer-circle {
+      border-color: $gray500;
+      border-width: 1px;
+  }
+  &:hover {
+      .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+          border-color: $viasatblack;
+      }
+  }
+  //checked
+  .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle  {
+       border-color: $viasatblack;
+      border-width: 1px;
+  }
+  .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle {
+      border-color: $viasatblack;
+      background: $viasatblack;
+  }
+  //tabbing
+  .mdc-radio__native-control:enabled:focus  + .mdc-radio__background .mdc-radio__outer-circle {
+       border-color: $teal500;
+  }
+   .mdc-radio__native-control:enabled:focus + .mdc-radio__background .mdc-radio__inner-circle {
+      border-color: $teal500;
+      background:$teal500;
+  }
+}
+
+//disabled
+.mdc-radio--disabled {
+ .mdc-radio {
+    border-width: 1px;
+    opacity: 0.3;
+ }
+}
+
+//labels
+.mdc-form-field {
+
+ label {
+   color: $gray700;	
+   font-family: "Source Sans Pro";	
+   font-size: 1.6rem;	
+   line-height: 2.8rem;
+ }
+ //disabled		
+ label.disabled-label {
+   opacity: 0.3;
+    }
+}
+
+
+/* END ***** AEM Components - Radio Buttons  - Sprint 0 */
+
+/* START ***** AEM Components - Text Fields  - Sprint 0 - https://jira.viasat.com/browse/WEBCON-888 */
+
+
+.vtext-field.mdc-text-field  {
+  height: 58px;
+  border-radius: 4px;
+  background-color:$viasatwhite;
+  border-width: 1px;
+  border-style: solid;
+  border-color:$gray400;
+  color: $gray800;
+  font-family:$SourceSansPro ;
+  width: 100%;
+  
+  &::before {
+      background-color: $viasatwhite;
+  }
+  
+  &::after {
+      background-color: $viasatwhite;
+  }
+  
+    .mdc-text-field__input {
+          caret-color:  $gray800;
+          font-family:$SourceSansPro ;
+          font-size: 1.8rem;
+          font-weight: 300;
+          line-height: normal;
+      }
+  
+  &.mdc-text-field--focused.mdc-ripple-upgraded--background-focused {
+     border: 1px solid $teal500;
+      background-color:$viasatwhite;
+      background-image: linear-gradient(to right, transparentize($teal100, .7) 0%,transparentize($teal100, .7) 100%); 
+      
+       &:not(.mdc-text-field--textarea) {
+     
+           border-bottom-color:$teal500;
+      }
+  }
+  
+  &.mdc-text-field--invalid {
+     border: 1px solid $magenta700;
+     background-color:$viasatwhite ;
+     background-image: linear-gradient(to right, transparentize($magenta100, .7) 0%,transparentize($magenta100, .7) 100%);  
+      
+       &:not(.mdc-text-field--textarea):not(.mdc-text-field--disabled) {
+     
+           border-bottom-color:$magenta700;
+           
+           &:not(.mdc-text-field--with-leading-icon) {
+               .mdc-text-field__icon {
+                   
+                   color:$magenta700; 
+               }
+           }
+      }
+      
+      &.mdc-text-field--focused.mdc-ripple-upgraded--background-focused {
+          &:not(.mdc-text-field--textarea):not(.mdc-text-field--disabled) {
+              
+               border-bottom-color:$teal500;
+              
+          }
+      }
+  }
+  
+   .mdc-floating-label {
+      
+          font-family:$SourceSansPro ;
+          font-size: 1.8rem;
+          font-weight: 300;
+          line-height: normal;
+      }
+  
+  &:not(.mdc-text-field--disabled) {
+      
+       .mdc-text-field__input {
+
+           border-bottom:none;
+      }
+      
+      .mdc-floating-label {
+          color:$gray600;
+      }
+      
+      &:not(.mdc-text-field--textarea) {
+       border-bottom-color: $gray400;
+
+      }
+      
+      &:not(.mdc-text-field--outlined){
+          
+          &:not(.mdc-text-field--textarea) {
+              
+              .mdc-text-field__input {
+                 border-bottom: none;
+
+              }
+          }
+          
+      }
+      
+       + .mdc-text-field-helper-line {
+           padding-left: 0px;
+           
+          .mdc-text-field-helper-text {
+              font-family:$SourceSansPro ;
+              color:$teal500;
+              margin: 3px 0px 0px;
+              font-size: 1.4rem;
+              line-height: 0.1rem;
+              letter-spacing: 0.04rem;
+              font-weight: 400;  
+          }
+      }
+     
+  }
+  
+  &.mdc-text-field--disabled  {
+      background-color: $gray100;
+      .mdc-floating-label{
+          color:$gray600;
+      }
+      
+      
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+.mdc-text-field {
+width: 100%; height: auto;  min-height: 80px;
+border: 1px solid $gray100;
+border-radius: 6px;
+&:not(.mdc-text-field--disabled){
+  background-color: $gray100;
+  &:not(.mdc-text-field--textarea) {border-color: $gray100;}
+}
+&::before, &::after {
+  position: absolute;
+   top: calc(50% - 100%); left: calc(50% - 100%);
+  width: 200%; height: 200%;
+  background-color: transparent;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+}
+&::before {
+  transition: opacity 15ms linear,background-color 15ms linear;
+  z-index: 1;
+}
+}
+
+
+/*   mdc-text-field__input  
+.mdc-text-field {
+.mdc-text-field__input {
+  padding: 38px 20px 14px;
+  width: 100%; height: 100%;
+  font-family: inherit; font-size: 2.0rem;font-weight: 300;
+  line-height: 2.8rem; letter-spacing: inherit;
+  border-bottom: none;
+  border-radius: 6px;
+  caret-color: $gray700;
+  caret-color: var(--mdc-theme-primary, $gray700);
+}	
+&:not(.mdc-text-field--disabled){
+  &:not(.mdc-text-field--outlined){
+    &:not(.mdc-text-field--textarea){ 
+      .mdc-text-field__input{border: none;}
+    }
+  }
+   .mdc-text-field__input { color: $gray700; }
+}
+.mdc-floating-label {
+}	
+}
+
+
+/* Label 
+.mdc-text-field{
+.mdc-floating-label {
+  position: absolute;
+  top: 52px;left: 20px;right: initial;
+  font-family: inherit;
+  font-size: 1.6rem;font-weight: 600;
+  line-height: 2.8rem; letter-spacing: inherit;
+  text-align: left; text-decoration: inherit; text-transform: inherit;text-overflow: ellipsis;
+}
+&:not(.mdc-text-field--disabled) .mdc-floating-label{
+  color: $gray700;
+}
+}
+
+
+/* Helper Text 
+
+.mdc-text-field{
+&+.mdc-text-field-helper-line {padding-right: 0;padding-left: 4px;}	
+&:not(.mdc-text-field--disabled)+.mdc-text-field-helper-line .mdc-text-field-helper-text {color: $gray700;}
+}
+.mdc-text-field-helper-text {
+display: block;
+margin: 15px 0 0;
+font-family: inherit;
+font-size: 1.4rem;font-weight: 400; line-height: 1.8rem;letter-spacing:normal;
+text-decoration: inherit;text-transform: inherit;
+opacity: 0;
+will-change: opacity;
+}	
+.mdc-text-field-helper-text--persistent {
+transition: none;
+opacity: 1;
+will-change: initial;
+}
+
+/*  Icons  
+.mdc-text-field--with-leading-icon .mdc-text-field__icon, 
+.mdc-text-field--with-trailing-icon .mdc-text-field__icon {
+bottom:0;
+top: auto;
+}
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon{
+color:$gray300;
+}
+
+/* focus 
+
+.mdc-text-field{
+&.mdc-text-field--focused{
+  &:not(.mdc-text-field--disabled){
+    &:not(.mdc-text-field--textarea) {
+      border-color: $teal400;background-color: #e8f5f5;
+    }
+    .mdc-floating-label  { border: none; }
+      .mdc-text-field__icon{color:$teal400;}
+  }
+}
+.mdc-floating-label--float-above  {
+  -webkit-transform: translateY(-16px) scale(0.75);
+  transform: translateY(-30px);
+  font-size: 1.3rem;line-height: 1.5rem;
+}
+
+}
+
+
+/* Verification 
+
+.mdc-text-field--invalid.mdc-text-field--with-trailing-icon:not(.mdc-text-field--with-leading-icon):not(.mdc-text-field--disabled) .mdc-text-field__icon {color: #FF4747;}
+
+.mdc-text-field{
+&:not(.mdc-text-field--disabled){
+  &.mdc-text-field--valid{
+    .mdc-text-field__icon{color:$teal400;}
+  }
+  &.mdc-text-field--invalid{
+    &:not(.mdc-text-field--textarea) { border-color: #FF4747;background-color: #ffebec; }
+    .mdc-text-field__icon{ color: #FF4747;}
+    &+.mdc-text-field-helper-line .mdc-text-field-helper-text {color: #FF4747;}
+  }
+}
+}*/
+
+
+
+/* END ***** AEM Components - Text Fields  - Sprint 0 */
+
+/* START ***** AEM Components - Select Dropdowns  - Sprint 0 - https://jira.viasat.com/browse/WEBCON-889 */
+
+
+.mdc-select.vselect {
+
+  display: flex; 
+  font-family:$SourceSansPro ;
+
+  
+  .mdc-select__anchor {
+      background-color:$viasatwhite;
+      border-radius: 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-color:$gray400;
+      width: 100%;
+      
+      &::before {
+          background-color: $viasatwhite;
+      }
+
+      &::after {
+          background-color: $viasatwhite;
+      }
+          .mdc-floating-label {
+          color:$gray600;
+          font-family:$SourceSansPro ;
+          font-size: 1.8rem;
+          font-weight: 300;
+          line-height: normal;
+          top:15px;
+              
+              &.mdc-floating-label--float-above {
+                  top: 21px;
+              }
+      }
+         
+      .mdc-select__selected-text {
+          text-indent: 0px;
+           font-family:$SourceSansPro ;
+          font-size: 1.8rem;
+
+          font-weight: 300;
+          color:$gray800;
+          line-height: normal;
+          padding-top: 24px;
+      }
+  }
+    &.mdc-select--focused{
+      
+    .mdc-select__anchor {
+     border: 1px solid $teal500;
+      background-color:$viasatwhite;
+      background-image: linear-gradient(to right, transparentize($teal100, .7) 0%,transparentize($teal100, .7) 100%);   
+      
+       &:not(.mdc-text-field--textarea) {
+     
+           border-bottom-color:$teal500;
+      }
+        
+          .mdc-select__dropdown-icon {
+          /* filter: saturate(50%);*/
+         background: url(data:image/svg+xml,%3Csvg%20width%3D%2210px%22%20height%3D%225px%22%20viewBox%3D%227%2010%2010%205%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3Cpolygon%20id%3D%22Shape%22%20stroke%3D%22none%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.54%22%20points%3D%227%2010%2012%2015%2017%2010%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E) center center no-repeat;
+      }
+  }
+        
+        .mdc-floating-label {
+           top: 21px;
+        }
+  }
+  &.mdc-select--focused.mdc-select--activated{
+      
+    .mdc-select__anchor {
+     border: 1px solid $teal500;
+      background-color:$viasatwhite;
+      background-image: linear-gradient(to right, transparentize($teal100, .7) 0%,transparentize($teal100, .7) 100%);  
+      
+       &:not(.mdc-text-field--textarea) {
+     
+           border-bottom-color:$teal500;
+      }
+        
+          .mdc-select__dropdown-icon {
+          /* filter: saturate(50%);*/
+         background: url(data:image/svg+xml,%3Csvg%20width%3D%2210px%22%20height%3D%225px%22%20viewBox%3D%227%2010%2010%205%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3Cpolygon%20id%3D%22Shape%22%20stroke%3D%22none%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.54%22%20points%3D%227%2010%2012%2015%2017%2010%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E) center center no-repeat;
+      }
+        
+  }
+
+  }
+
+  
+  .mdc-select__menu {
+      width: 100%;
+       box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+      .mdc-list {
+
+          li {
+              font-size: 1.6rem;;
+              font-family:$SourceSansPro ;
+              line-height: 3.2rem;;
+              color:$gray800;
+
+              &.mdc-list-item--selected {
+                   color:$gray400;
+
+                  &::before {
+                      background-color: transparent;
+                  }
+
+                  &::after {
+                      background-color: transparent;
+                  }
+              }
+          }
+      }
+  }
+  &:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item::after {
+      background-color: $gray800;
+  }
+  
+  &.mdc-select--disabled {
+      
+      .mdc-select__anchor  {
+      background-color: $gray100;
+          .mdc-floating-label{
+              color:$gray600;
+          }
+      }
+    }  
+}
+
+
+
+/* END ***** AEM Components - Select Dropdowns  - Sprint 0 */
+
+/* START ***** AEM Components - Subscribe  - Sprint 2 - https://jira.viasat.com/browse/WEBCON-860 */
+.vSubscribe{
+	
+	display: flex;
+	flex-direction: column;
+	
+	// Helper Class
+	.mb-20 {
+		margin-bottom: 20px;
+	}
+	
+	// Layout
+	
+	// Element
+	h1, h2, h3, h4, h5, h6, p {
+		color: $viasatwhite;
+		margin-bottom: 0px;
+	}
+	h4 {
+		font-size: 2.2rem;
+	}
+	p {
+		margin-top: 12px;
+	}
+	.mdc-text-field {
+		width: 100%;
+	}
+	.vbtn {
+		align-self: flex-start;
+	}
+	
+	
+	@media ( min-width: 768px ) and ( max-width: 1199px ) { // Tablate  
+
+		.vSubscribe-content {
+			display: flex;
+			flex-direction: row;
+			align-items: baseline;
+			h3, h4 {
+				margin-right: 20px;
+			}
+		}
+		
+		.vSubscribe-inputs {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			
+			.mdc-select {
+				width: 48%;
+			}
+			
+			.text-field-container {
+				width: 48%;
+			}
+		}
+		
+		
+		.vbtn {
+			align-self: flex-end;
+		}
+
+		 
+
+	} 
+}
+/* END ***** AEM Components - Subscribe  - Sprint 2 */
+
+/* START ***** AEM Components - Site Notification / Toast - Sprint 1 and 2 - https://jira.viasat.com/browse/WEBCON-891 */
+
+.vtoast-bar a {color:$viasatwhite;}
+
+.vtoast-headline p span {font-size:1.4rem;}
+
+#vtoast {
+
+
+
+#topId {
+  /*overflow: hidden;*/
+}
+.toppe {
+  position: fixed;
+  top: 0;
+  background-color: $viasatwhite;
+  width: 100%;
+}
+.toast-outer-wrapper {
+  display: table;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 28px;
+  color: $viasatwhite;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(270deg, #00528c 0.02%, $teal500 100%);
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.15);
+}
+.toast-outer-wrapper.vtoast-bar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  -webkit-transition: opacity 500ms linear;
+}
+.vtoast-bar .inner-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mdc-layout-grid {
+ height: 50px;
+ overflow: hidden;
+}
+.toast-outer-wrapper p {
+ position: relative;
+ top: 10px;
+}
+.toast-outer-wrapper p span {
+ text-transform: uppercase;
+ font-family: "uni_neueheavy", "Helvetica Neue", "Helvetica Extra Bold", "Arial Extra Bold", sans-serif;
+}
+.mdc-layout-grid__cell--align-middle {
+   align-self: auto !important;
+}
+@media (max-width: 769px) {
+  .toast-outer-wrapper.vtoast-bar {
+     height: 37px;
+  }
+}
+.toast-outer-wrapper.vtoast-bar.vclosetoast {
+  opacity: 0;
+}
+.toast-outer-wrapper.vtoast-bar.vnotoast {
+  display: none;
+}
+@media (min-width: 840px) {
+  .mdc-layout-grid {
+     padding: 0 15px !important;
+  }
+}
+@media (max-width: 839px) and (min-width: 480px) {
+  .mdc-layout-grid {
+     padding: 0 16px !important;
+  }
+  .toast-outer-wrapper p {
+     top: 0;
+   }
+}
+@media (max-width: 479px) {
+  .mdc-layout-grid {
+     padding: 0 16px !important;
+  }
+  .toast-outer-wrapper p {
+     top: 0;
+   }
+}
+
+}
+
+/* END ***** AEM Components - Site Notification / Toast - Sprint 1 and 2 */
+
+/* START ***** AEM Components - Tiles - Sprint 1 - https://jira.viasat.com/browse/WEBCON-857 */
+
+
+.vtiles-hover {
+  border:10px solid $viasatwhite;
+  display: flex;
+  
+  border-radius: 8px;
+  box-shadow: 0 10px 60px -3px rgba(0,0,0,0.1);
+  position: relative;
+  height: 360px;
+  max-width: 360px;
+  //cursor: pointer;
+  
+  color:$viasatwhite;
+  box-sizing: border-box;
+  text-align: center;
+  
+  @media (max-width: 1199px) {
+     height: 210px;  
+      max-width: 210px; 
+       border:6px solid $viasatwhite;
+  }
+  
+   @media (max-width: 767px) {
+     height: 180px;
+      max-width: 100%; 
+  }
+  
+  .vtile-bkg {
+     border-radius: 6px; 
+      background-image: url("../img/tile-bkg.jpg");
+      background-position: center center;
+      background-size: cover;
+      top: 0px;
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      
+      @media (max-width: 767px) {
+          background-position: top center;
+      }
+
+  }
+  
+  .wrapper-tile {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background:rgba(0,0,0,0.3);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-sizing: border-box;
+  //display: none;
+      
+      h3 {
+          font-size: 28px;
+          line-height: 35px;
+          font-family: $uniNeue-Heavy ;
+          font-weight: 900;
+          margin: 0px 0px 25px 0px;
+          color: $viasatwhite;
+          
+          @media (max-width: 1199px) {
+              
+            font-size: 14px;	
+              font-weight: 900;	
+              letter-spacing: 0.5px;	
+              line-height: 18px;
+              margin: 0px 0px 10px 0px;
+          
+          }
+      }
+      
+      .tile-circle {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          border:1px solid $viasatwhite;
+          display: flex;
+      align-items: center;
+      justify-content: center;
+          
+          
+          i {
+              font-size: 12px;
+              color:$viasatwhite;
+          }
+      }
+       
+  }
+  
+  .wrapper-tile-hover {
+      //display: none;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+     display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px 40px;
+      box-sizing: border-box;
+      background: rgba(62,193,190,0.9);
+      opacity:0;
+      
+      h5 {
+           font-size: 16px;	
+          font-weight: 900;	
+          letter-spacing: 0.44px;	
+          line-height: 20px; 
+          font-family: $uniNeue-Heavy ;
+          margin-top: 0px;
+          margin-bottom: 33px;
+          color:$viasatwhite;
+      }
+      
+      p {
+          margin: 0px;
+          line-height: 28px;	
+      }
+      
+      button {
+         margin-top: 37px; 
+      }
+      
+      @media (max-width: 1199px) {
+          padding: 5px 10px;
+          
+           h5 {
+              font-size: 14px;	
+
+              line-height: 14px; 
+
+
+              margin-bottom: 10px;
+          }
+
+          p {
+              font-size: 12px;
+              margin: 0px;
+              line-height: 16px;	
+          }
+
+          button {
+             margin-top: 15px; 
+              margin-bottom: 0px;
+          }
+      }
+  }
+  
+  &:hover {
+      
+      .wrapper-tile {
+          //display:none;
+          opacity:0;
+      }
+      .wrapper-tile-hover {
+           
+          opacity:1;
+      }
+  }
+  &:active {
+  
+      .wrapper-tile {
+          opacity:0;
+      }
+      .wrapper-tile-hover {
+           opacity:1;
+      }
+
+      }
+  
+  &:focus {
+       .wrapper-tile {
+           opacity:0;
+      }
+      .wrapper-tile-hover {
+           opacity:1;
+      }
+  }
+}
+
+.vtiles-icons {
+  box-shadow: 0 10px 60px -3px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  border:8px solid $viasatwhite;
+ // height: 178px;	
+  max-width: 165px;
+  box-sizing: border-box;
+  
+  @media (max-width: 767px) {
+     box-shadow: 0 10px 40px -3px rgba(0,0,0,0.1);
+     border:4px solid $viasatwhite;
+      width: 50%;
+  }
+  
+  
+  .vtile-bkg {
+      background-color: $gray100;
+  }
+  
+  .wrapper-tile  {
+     // overflow: auto;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 5px;
+      
+      .tile-icon {
+          /*padding-top:15px;*/
+          height: 64px;
+          
+          i {
+              font-size: 64px;
+              color: $viasatgreen;
+          }
+          
+          @media (max-width: 767px) {
+              height: 52px;
+              
+              i {
+                  font-size: 52px;
+              }
+          }
+      }
+      
+      h6 {
+          margin: 5px 0px;
+          color: $viasatgrey;	
+          font-family: $uniNeue-Heavy ;	
+          font-size: 14px;	
+          font-weight: 900;	
+          letter-spacing: 0.25px;	
+          line-height: 14px;
+          text-transform: capitalize;
+          
+          @media (max-width: 767px) {
+          font-size: 10px;	font-weight: 900;	letter-spacing: 0.18px;	line-height: 7px;  margin: 7px 0px 11px 0px;
+          }
+      }
+      
+      p.small {
+          color: $gray700;	
+          font-size: 14px;
+          line-height: 18px;
+          margin-top: 0px;
+          margin-bottom: 10px;
+          font-weight: normal;
+          
+          a {
+              font-size: 12px;	
+              font-weight: 600;	
+              line-height: 15px; 
+              color: $gray700;
+          }
+          
+          @media (max-width: 767px) {
+              font-size: 7px;	
+              line-height: 9px;
+              
+               a {
+                  font-size: 7px;	
+                
+                  line-height: 9px; 
+             
+              }
+          }
+      }
+  }
+  
+  
+}
+
+
+/* END ***** AEM Components - Tiles - Sprint 1 */
+
+/* START ***** AEM Components - Sections  - Sprint 1 - https://jira.viasat.com/browse/WEBCON-858 */
+.vcontent { 
+	margin: 77px auto 0;padding: 0 15px;
+	width: calc(100% - 30px);max-width: 1170px;
+}
+article.preview{
+	max-width: 550px;
+	padding-top: 30px 15px 0;
+	.h2{
+		@include fontStyle($uniNeue-Heavy,2.4,900,$color:$gray800,$lh:1.33); 
+		letter-spacing: normal;
+	}
+	.line{
+		width:75px;height:3px;
+		background-color: $teal300;
+		margin: 25px 0 13px;
+	}
+	.txt{
+		@include fontStyle($SourceSansPro,1.6,$color:$gray700,$lh:1.75); 
+	}
+
+}
+.btn-bar{padding-top: 30px; text-align: center;}
+
+.blue500 .preview .line {background-color: $blue500;}
+.green500 .preview .line{background-color: $green500;}
+.teal300 .preview .line {background-color: $teal300;}
+.teal500 .preview .line {background-color: $teal500;}
+.white .preview .line   {background-color: $viasatwhite;}
+
+/*Top Banner w/ Carosel ... */
+
+.sect-wifi{
+	.full-bkgrd{width: 100%;	}
+	.sect-img{
+		margin: 50px 0 0;
+    width: 100%;height: 320px;
+    overflow: hidden;
+    background: url(../img/bg-test.jpg);
+    background-position: left bottom;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+	}
+	.btn-bar{margin-bottom: 50px;}
+}
+.sect-govt{
+	.full-bkgrd{width: 100%;}
+	.sect-img{
+		margin: 50px 0 0;
+    width: 100%;height: 320px;
+    overflow: hidden;
+    background: url(../img/wide/wide_bg_government_satellite.jpg);
+    background-position: right top;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+	}
+}
+.sect-help{
+	.full-bkgrd{
+		width: 100%;
+		height:auto;
+		background-image: url("../img/wide/bkg_motif_320x404.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.vcontent{box-sizing:border-box}
+	article.preview{
+		padding-top: 100px;padding-bottom: 100px;
+		.h2{font-size: 3.2rem;line-height: 1.28;color:$viasatwhite;letter-spacing: 0.2px; }
+	}
+	.h4 {
+		margin: 35px 0 30px;
+		@include fontStyle($uniNeue-Heavy,1.4,$color:$green200,$lh:1.29); 
+		text-transform: uppercase;letter-spacing: 0.5px
+	}
+	.mobile-hide {display: none;}
+}
+
+.sect-blog{
+	.full-bkgrd{
+		display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+		
+		width: 100%;min-height: 372px;
+		background: linear-gradient(109.39deg, #3EC1BE 0%, #006EAD 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+   }
+	.vcontent{margin: 0 auto;}
+	article.preview{
+		padding-top: 0;
+		text-align: center;
+		max-width: none;
+		.h2 {
+			@include fontStyle($uniNeue-Heavy,3.2,$color:$viasatwhite,$lh:4.1rem); 
+		}
+		.txt{color:$viasatwhite;}
+		.line{width: 88px; margin-left: auto;margin-right: auto;}
+	}
+	.vcontent{box-sizing:border-box}
+
+}
+
+.sect-benefits{
+	text-align: left;
+	article.preview {
+    	margin: 128px auto 72px;
+		.line {
+		}
+	}
+	.btn-center{
+		margin: 95px auto 125px;text-align: center;
+	}
+}
+
+.btn-bar{text-align: center;}
+
+
+/**
+	** Tablet ***
+**/
+
+@include mediaSize(min-md){
+	.vcontent { margin: 0 auto; }
+
+	article.preview{
+		max-width: 550px;
+		padding: 16px;
+		.h2{
+			font-size: 3.2rem;
+			line-height: 1.25;
+			letter-spacing: normal;
+			}
+
+		.line{
+			width:98px;height:4px;
+			background-color: $teal500;
+			margin: 25px 0 28px;
+		}
+		
+		& button{margin-top: 30px;
+		}
+	}
+	.sect-rght{
+		.vcontent{padding-left: 45%;}
+		.btn-bar{text-align: left;}
+    article.preview{padding-right: 45px;}
+  }
+  
+  .sect-rght,.sect-lft,.sect-cntr {
+    .txt {color:$gray700;}
+  }
+	.sect-lft{
+		.vcontent{}
+		.btn-bar{text-align: left;}
+		article.preview{padding-left: 45px;}
+	}
+	.sect-cntr{ 
+		text-align: center;
+		.vcontent{
+			.btn-bar{text-align: center;}
+		}
+		article.preview {
+			max-width: 750px;
+			margin: 128px auto 72px;
+			.line {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+	.sect-img{display: none;}
+	
+	.sect-wifi{
+		.full-bkgrd{
+			width: 100%;
+			height:730px;
+      background-image: url("../img/bg-test.jpg");
+      background-position:left bottom;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+			clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+		@include alignvert();
+
+		}
+	}
+	.sect-govt{
+		.full-bkgrd{
+			width: 100%;
+			height:730px;
+			background-image: url("../img/wide/wide_bg_government_satellite.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+			@include alignvert();
+
+		}
+
+
+	}
+	.sect-help{
+		.full-bkgrd{
+			background-image: url("../img/wide/bkg_motif_771x394.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		article.preview{
+			.h2{font-size: 4rem;line-height: 1.25;letter-spacing: 0.25px;}
+		}
+		.h4{margin: 30px 0 25px;color:$teal200;}
+		.mobile-hide {display: inline;}
+	}
+
+	.sect-blog{
+		.full-bkgrd{
+			min-height: 264px;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+		 }
+		article.preview{
+			text-align: left;
+			.line{display:none;}
+			.h2 {
+				margin-bottom: 30px;
+				font-size: 4.0rem; color:$viasatwhite;
+        line-height:  5.0rem; letter-spacing: 0.25px;
+        font-weight:900;
+			}
+		}
+	}
+
+	
+}
+
+/***
+  *** Desktop ***
+***/
+
+@include mediaSize(min-xl){
+	.sect-help{
+		.full-bkgrd{
+			background-image: url("../img/wide/bkg_motif_1440x394.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		article.preview{
+			.h2{font-size: 3.2rem;line-height: 1.25;letter-spacing: 0.25px;}
+		}
+		.h4{color:$teal200;}
+	}
+
+	article.preview{
+		width: 550px;
+  }
+  .sect-blog .full-bkgrd {min-height:463px;}
+}
+	.sect-blog{
+		.full-bkgrd{
+			//min-height: 463px;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+		 }
+		article.preview{width: auto;	}
+
+	}
+
+
+.white {
+	.h2,
+	article.preview .txt {color: $viasatwhite;}
+	a{ 
+		&.vlnk {
+			color: $viasatwhite;;
+			&:hover,
+			&:focus{color: $viasatwhite;}
+			&:visited {color: $viasatwhite;}
+		}
+	}
+
+}
+
+.sect-lft, .sect-rght{
+   article.preview .line {margin-left:0;}
+}
+
+@media screen and (max-width:767px){
+  .sect-cntr{
+    article.preview .line {margin-left:0;}
+ }
+
+}
+/* END ***** AEM Components - Sections  - Sprint 1 */
+
+/* START ***** AEM Components - Video / Image Sections with Left / Right Text - https://jira.viasat.com/browse/WEBCON-1050 */
+
+.vVideoSection {
+	.mdc-layout-grid__inner {
+		padding: 30px 0 30px 0;
+	}
+	.shortBlueLeft {
+		border: 2px solid $teal500;
+		width: 100px;
+		margin: 25px 0 30px 0
+	}
+	.btn-holder {
+		margin: 30px 0 30px 0;
+	}	
+	@media ( min-width: 0 ) and ( max-width: 767px ) { // Tablate 
+		.content {
+			margin: 0 15px 0 15px;
+			.center {
+				text-align: center;
+			}
+		}
+	}
+		
+}
+.wistia_responsive_padding {
+  padding:56.25% 0 0 0;
+  position:relative;
+}
+.wistia_responsive_wrapper {
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  width:100%;
+}
+.wistia_embed {
+  height:100%;
+  position:relative;
+  width:100%;
+}
+.wistia_swatch {
+  height:100%;
+  left:0;
+  opacity:0;
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  transition:opacity 200ms;
+  width:100%;
+}
+.wistia_responsive_wrapper img {
+  filter:blur(5px);
+  height:100%;
+  object-fit:contain;
+  width:100%;
+}
+
+/* END ***** AEM Components - Video / Image Sections with Left / Right Text  */
+
+/* START ***** AEM Components - Hero Carousel - Sprint 2 - https://jira.viasat.com/browse/WEBCON-854 */
+
+/* Hero Carousel */
+article.hero {
+  padding-left: 15px;
+  padding-right: 5px;
+  
+}
+article.preview.hero .line {
+  width: 75px;
+  height: 3px;
+  background-color: $teal300;
+  margin: 25px 0 13px;
+}
+article.hero .txt {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: $viasatgrey;
+  font-weight: 400;
+  line-height: 1.75;
+}
+article.hero button {
+  margin-top: 30px;
+}
+
+.blue500 .hero .line {
+  background-color: $blue500;
+}
+
+.green500 .hero .line {
+  background-color: $green500;
+}
+
+/*Top Banner w/ Carosel */
+.banner {
+  position: relative;
+  margin-top:80px;
+}
+.banner .vcontent {
+  padding: 50px 39px 50px;
+}
+.banner .vcontent article.hero .line {
+  background-color: $teal500;
+}
+.banner .vcontent article.hero .txt {
+  font-family: "uni_neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: $gray700;
+  font-weight: 400;
+  line-height: 1.55;
+}
+.banner .screen1 .img-sm {
+  width: 100%;
+}
+.banner .screen1 .img-bnr-1, .banner .screen2 .img-bnr-1, .banner .screen3 .img-bnr-1 
+{ -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%); }
+
+@media (max-width: 1041px) {
+  .banner {
+      margin-top: 60px;
+  }  
+}
+
+/* Carosuel */
+.carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slides {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 3em;
+  color: $viasatwhite;
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.slide:nth-child(1) {
+  opacity: 1;
+}
+
+.slide:nth-child(2) {
+}
+
+.slide:nth-child(3) {
+}
+
+.slide[data-state=active] {
+  display: block;
+}
+
+.indicators {
+  position: relative;
+  text-align: center;
+  padding-top: 89%;
+}
+
+.indicator {
+  cursor: pointer;
+}
+
+.img-sm {
+  max-height: 100%;
+  width: 100%;
+}
+.viasatwhite {
+  color: $gray700;
+}
+/* radio button carousel controls */
+.indicators .mdc-radio {
+  padding: 0;
+}
+.indicators .mdc-radio .mdc-radio__background {
+  width: 12px;
+  height: 12px;
+}
+.indicators .mdc-button.vbtn.mdc-button--outlined.vbtn-outline-teal {
+  vertical-align: top;
+  margin-top: 30px;
+}
+.indicators .mdc-radio .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle {
+  border-color: $teal500;
+}
+.indicators .mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle, .indicators .mdc-radio .mdc-radio__native-control:enabled:focus + .mdc-radio__background .mdc-radio__inner-circle {
+  border-color: $teal500;
+  background: $teal500;
+  top: -0.4rem;
+  left: -0.4rem;
+}
+.indicators .mdc-radio .mdc-radio__native-control:enabled:not(:checked) {
+  border-color: $teal500;
+  border-width: 1px;
+}
+.indicators .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+    border-color: rgba(10,165,171,1);
+}
+.indicators .mdc-radio:hover .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: $teal500;
+}
+
+
+@media (min-width: 768px) {
+
+  
+
+  article.hero {
+    width: 50%;
+    padding: 16px;
+    margin-top:70px;
+  }
+  article.hero .line {
+    width: 98px;
+    height: 4px;
+    background-color: $teal500;
+    margin: 25px 0 28px;
+  }
+  article.hero .txt {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: $viasatgrey;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+  article.hero button {
+    margin-top: 30px;
+  }
+
+  .banner .vcontent {
+    padding: 20px 39px 50px;
+    height: 35px;
+  }
+  .banner .vcontent article.hero .txt {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    color: $viasatwhite;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .banner .screen1 {
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/wide/wide_home_banner_guy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+  .banner .screen2 {
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/wide/wide_home_banner_girl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+  .banner .screen3 {
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/wide/wide_bg_government_satellite2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+  .banner .screen1 .img-sm, .banner .screen2 .img-sm, .banner .screen3 .img-sm {
+    display: none;
+  }
+
+  .sect-img {
+    display: none;
+  }
+  .carousel {
+    position: relative;
+    height: 76rem;
+    width: 100%;
+  }
+  .indicators {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 50%;
+    padding: 16px 4%;
+    text-align: left;
+    z-index: 4;
+  }
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 3em;
+    color: $viasatwhite;
+    /*line-height: 400px;*/
+    opacity: 0;
+    transition: opacity 1000ms;
+   
+  }
+  .slide.slide:nth-child(1) {
+    z-index: 3;
+  }
+  h1.viasatwhite, h3.viasatwhite {
+    color: $viasatwhite;
+  }
+  /* radio button carousel controls */
+  .carousel .mdc-button.vbtn.mdc-button--outlined.vbtn-outline-teal {
+    color: $viasatwhite;
+    border-color: $viasatwhite;
+  }
+  .carousel .mdc-radio .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: $viasatwhite;
+  }
+  .carousel  .mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle, .carousel .mdc-radio .mdc-radio__native-control:enabled:focus + .mdc-radio__background .mdc-radio__inner-circle {
+    border-color: $viasatwhite;
+    background: $viasatwhite;
+  }
+  .carousel  .mdc-radio .mdc-radio__native-control:enabled:not(:checked) {
+    border-color: $viasatwhite;
+    border-width: 1px;
+  }
+  .carousel   .mdc-form-field {
+    color: $viasatwhite;
+  }
+  .carousel   .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+    border-color: rgba(255,255,255,1);
+  }
+  .carousel   .mdc-radio:hover .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: $viasatwhite;
+  }
+}
+/* IE11 Fix */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .indicators {
+    bottom: -2rem;
+  }
+}
+/***
+  *** Desktop ***
+***/
+@media (min-width: 992px) {
+  article.hero {
+    width: 550px;
+    margin-top:200px;
+  }
+
+  .banner .vcontent {
+    padding: 20px 39px 50px;
+    height: 35px;
+  }
+
+}
+@media (min-width: 1280px) {
+  .indicators {
+    padding: 16px 8%;
+  }
+}
+@media (min-width: 1440px) {
+  .indicators {
+    padding: 16px 10%;
+  }
+}
+
+
+
+@media screen and (max-width:767px){
+  .banner.full-content {padding-bottom:30px;}
+  .carousel {height:850px;}
+  .slide {max-width:100%;text-align:left;}
+  .slide h1 {color:$viasatgrey !important;max-width:90%;}
+  .slide h3 {color:$gray700 !important;max-width:90%;}
+  .slide section {margin-top:0;}
+  
+  .indicators {padding:0;position:absolute;top:500px;left:50%;margin-left:-40px;}
+
+  .article.hero {padding-left:0;}
+  
+}
+/* Hack CSS to deal with Banner Carousel Indicator Buttons */
+@media screen and (min-width:695px) and (max-width:767px){
+  .carousel {height:1150px;}
+  .indicators {top:676px;}
+}
+@media screen and (min-width:421px) and (max-width:600px){
+  .indicators {top:420px;}
+}
+@media screen and (min-width:425px) and (max-width:480px){
+  .indicators {top:430px;}
+}
+@media screen and (min-width:411px) and (max-width:424px){
+  .indicators {top:400px;}
+}
+@media screen and (min-width:320px) and (max-width:410px){
+  .indicators {top:340px;}
+}
+
+/* END ***** AEM Components - Hero Carousel - Sprint 2 */
+
+/* START ***** AEM Components - Image Carousel - Sprint 5 - https://jira.viasat.com/browse/WEBCON-877 */
+
+/* Leadership Scss Document */
+.glide .wrapper-tile-arrows,.bio-img .wrapper-tile-arrows {padding-top:0;}
+.crsl-artcl { 
+  display: none; -ms-flex-align: top;-webkit-align-items: top;-webkit-box-align: top;align-items: top;flex-direction: column;
+  &-0 {display: flex; }
+  .bio{
+    &-article,
+    &-img{
+      display: block;
+    }
+    &-article{order: 2;
+      padding: 0 10px; width: auto;
+    }
+    &-img{
+      order: 1;	
+      margin: 0 auto;padding: 0; width: 100%; max-width: 555px;
+      &-bdr{
+        display: inline-block; padding:10px;
+        border-radius: 8px;
+        box-shadow: 0 10px 60px -3px rgba(0, 0, 0, 0.1);
+        img {display: block; width: 100%; max-width: 525px;max-height: 525px; }
+      }
+    }
+    &-txt {padding-top: 75px;
+      .h2 {
+        @include fontStyle($uniNeue-Heavy,3.2,900,$gray800,1.28); 
+        letter-spacing: 0.2px; 
+      }
+      .h3 {
+        margin: 0 0 25px;
+        @include fontStyle($uniNeue,2.2,400,$gray700,1.41); 
+        letter-spacing: normal; 
+      }
+      .line {
+        width: 98px;height: 4px;
+        background-color: $teal500;margin: 9px 0 28px; 
+      }
+      p {
+        @include fontStyle($SourceSansPro,1.6,400,$gray700,1.75); 
+      }
+    }
+  }
+}
+/**
+** Tablet **
+**/
+@media (min-width: 600px) {
+.crsl-artcl { 
+  .bio{
+    &-img{
+      &-bdr{
+        img {width: 525px;}
+      }
+    }
+  }
+}
+}
+@include mediaSize(min-md){
+
+.crsl-artcl { 
+  padding: 0 25px;
+  .bio{
+    &-article,
+    &-img{
+      display: inline-block;padding: 15px 0; width: 100%;
+    }
+    &-article{order: 2;}
+    &-img{order: 1;
+      max-width: 555px;
+      &-bdr{
+        padding:15px;
+        img {width: 525px;}
+      }
+    }
+    &-txt {padding-top: 45px;
+      .h2 {font-size: 4.0rem;line-height:  50px;letter-spacing: 0.25px;}
+      .line { background-color: $teal500;margin: 20px 0 30px; }
+      p {
+        @include fontStyle($SourceSansPro,1.6,400,$gray700,1.475); 
+      }
+    }
+  }
+}
+
+
+}
+
+
+/***
+*** Desktop ***
+***/
+
+@include mediaSize(min-xl){
+.crsl-artcl { 
+  flex-direction: row;padding: 0 10px;
+  .bio{
+    &-article,
+    &-img{
+      display: inline-block;width: calc(50% - 16px); max-width: 555px;
+    }
+    &-article{order: 1;}
+    &-img{order: 2;}
+    &-txt {padding-top: 30px; max-width: 485px;
+      .h2 {line-height:  1.25;letter-spacing: 0.25px;}
+      .line {
+        width: 75px;height: 3px;
+        margin: 21px 0 25px; 
+      }
+      p {
+        @include fontStyle($SourceSansPro,1.6,400,$gray700,1.475); 
+      }
+    }
+  }
+}
+}
+.glide{
+	padding-top: 73px;
+	padding-bottom: 125px;
+	&__slide{ 
+		position: relative;
+		.slide-img-bdr{ position: relative;
+			display: inline-block; padding:10px;
+			border-radius: 8px;
+			box-shadow: 0 10px 60px -3px rgba(0, 0, 0, 0.1);
+			background-color: $viasatwhite;
+			img {display: block; max-width: 120px;max-height: 120px;}
+			.slide-img-overlay {
+				position: absolute; top: 0;left:0 ; z-index: 3;margin: 10px; width: calc(100% - 20px); height: calc(100% - 20px);text-align: center; background-color: rgba(0,0,0,0.3); border-radius: 6px;
+				display: -webkit-flex; display: flex;
+				-ms-flex-align: end;
+				-webkit-align-items: end;
+				-webkit-box-align: end;align-items: flex-end;justify-content: center;
+
+				.h4{
+					margin: 0;padding:0 0 10px;
+					@include fontStyle($uniNeue-Heavy,1.6,900,$viasatwhite,1.33); 
+					letter-spacing: normal;text-transform: uppercase;
+				}
+			}
+		}
+		&.glide__slide--active .slide-img-overlay{display: none;}
+	}
+	&__slides{ height: 180px;}
+	&__arrows { position: relative; }
+	&__arrow {
+		position: absolute;top: -26px; z-index: 2;
+		display: block;
+		padding: 6px 2px 2px;
+		width: 24px;height: 24px;
+		color: $viasatwhite;line-height: 1;
+		text-transform: uppercase;
+		background-color: transparent;
+		border: 1px solid $teal500;border-radius: 24px;
+		box-shadow:none;text-shadow:none;
+		opacity: 1;
+		cursor: pointer;
+		transition:none;transform:none;
+		&:hover { padding: 4px 0 0;border: 2px solid $teal500; }
+		&:focus {outline: none !important; box-shadow: none;}
+		&--left { left: 15px; }
+		&--right { left: 59px; }
+		.material-icons {
+			display: inline-block;
+			font-family: 'Material Icons';
+			font-size: 1.4rem;color:$teal500;font-weight: normal;font-style: normal;
+			line-height: 1;letter-spacing: normal;	text-transform: none;
+			white-space: nowrap;word-wrap: normal;
+			direction: ltr;
+			-webkit-font-feature-settings: 'liga';
+			-webkit-font-smoothing: antialiased;
+		}
+		.mdc-list-item__graphic {
+			width: 24px;height: 24px;
+			margin: -2px 0 0 -3px;
+			flex-shrink: 0;
+			align-items: center;justify-content: center;
+			background-color: transparent;
+		}
+		&:hover .mdc-list-item__graphic {margin: -1px 0 0 -2px;}
+	}
+}
+
+.glide-controls {
+	position: relative;
+	margin-top: -8px;
+	-webkit-touch-callout: none;user-select: none;
+	.btn-glide {
+		position: absolute; top: 26px;
+		z-index: 2;
+		display: block;
+		padding: 6px 2px 2px;
+		width: 24px;height: 24px;
+		color: $viasatwhite; line-height: 1;
+		text-transform: uppercase;
+		background-color: transparent;
+		border: 1px solid $teal500; border-radius: 24px;
+		box-shadow: none; text-shadow: none;
+		opacity: 1;
+		cursor: pointer;
+		transition: none; transform: none;
+		&:hover { padding: 5px 1px 2px; border: 2px solid $teal500; }
+		&:focus { outline: none !important; box-shadow: none; }
+		&-prev {left: 20px;}
+		&-next {left: 60px;}
+	}
+	.material-icons {
+	display: inline-block;
+	font-family: 'Material Icons';
+	font-size: 1.4rem;
+	color: $teal500;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+	.mdc-list-item__graphic {
+	margin: -2px 0 0 -3px;
+	width: 24px; height: 24px;
+	flex-shrink: 0; align-items: center;justify-content: center;
+	background-color: transparent;
+}
+}
+
+
+@media (min-width: 700px) {
+  .glide {
+		padding-bottom: 150px; 
+		&__slide {
+			position: relative; 
+			.slide-img-bdr {
+				position: relative;
+				display: inline-block;
+				padding: 10px;
+				border-radius: 8px;
+				background-color: $viasatwhite;
+				img {
+					max-width: 243px;
+					max-height: 243px;
+					border-radius: 6px; 
+				}
+				.slide-img-overlay {
+					max-width: 243px; max-height: 243px;
+					@include fontStyle($uniNeue-Heavy,1.6,900,$viasatwhite,1.33);
+					text-align: left; text-transform: uppercase; 
+				}
+			}
+		}
+	}
+	.glide__slides { height: 310px; }
+	.glide__arrow--left  { left: 100px; }
+	.glide__arrow--right { left: 150px; } 
+	
+	.glide-controls {
+		.btn-glide {
+			&-prev {left: 10px;}
+			&-next {left: 54px;}
+		}
+	}
+}
+
+
+
+/**
+	** Tablet **
+**/
+
+@include mediaSize(min-md){
+	.glide{
+		padding-top: 85px;
+		padding-bottom: 150px;
+		&__slide{ 
+			position: relative;
+			.slide-img-bdr{ position: relative;
+				display: inline-block; padding:10px;
+				border-radius: 8px;
+				background-color: $viasatwhite;
+				img { max-width: 243px;max-height: 243px;  border-radius: 6px}
+			/*	.slide-img-overlay {
+
+				}*/
+			}
+		}
+		&__slides{ height: 310px;}
+		&__arrow {
+			&--left { left: 35px; }
+			&--right { left: 75px; }
+		}
+	}
+}
+
+
+/***
+  *** Desktop ***
+***/
+
+@include mediaSize(min-xl){
+	.glide{
+		padding-top: 60px;
+		padding-bottom: 150px;
+		&__slide{ 
+			position: relative;
+			.slide-img-bdr{ 
+				img { }
+				.slide-img-overlay {
+					.h4{ padding: 6px 0;line-height: 20px; letter-spacing: 0.44px; }
+				}
+			}
+		}
+		&__slides{ height: 310px;}
+		&__arrow {
+			&--left { left: 100px; }
+			&--right { left: 144px; }
+		}
+	}
+}
+
+.glide {padding-bottom:20px;}
+
+@media screen and (min-width:1027px){
+  .glide {max-width:1440px;margin:0 auto;}
+ }
+  
+
+/* END ***** AEM Components - Image Carousel - Sprint 5 */
+
+/* START ***** AEM Components - Need Help - Sprint 1 - https://jira.viasat.com/browse/WEBCON-853 */
+
+.help-widget-container {
+  overflow: hidden;
+}
+
+.help-widget-container {
+.mdc-drawer--modal+.mdc-drawer-scrim {
+  background-color: rgba(0,0,0, 0);
+}
+.mdc-drawer--modal {
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+  left: auto;
+}
+
+.mdc-drawer {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+  width: 36.2rem;
+}
+.mdc-button.vhelp 
+
+{ padding: 0 0 0 2.2rem; transform: rotate(-90deg); position: fixed; right: -6.8rem; margin-top: 23.6rem; border-radius: 6px 0 0 0; background-color: $viasatwhite; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3); color: $tealextra1; font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.4rem; font-weight: 600; z-index: 999999; }
+/* ie11 ripple patch */
+.mdc-button.vhelp {
+  padding: 0 0 0 2.2rem;
+}
+.vhelp-text {
+  position: relative;
+  top: -0.3rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.mdc-button.vhelp:focus {box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8 )}
+.mdc-list-item__graphic.vhelp-quote {
+  transform: translateX(0%) translateY(0%) rotate(90deg);
+  background-color: $teal500;
+  color: $viasatwhite;
+  padding: 1.6rem 0.7rem 0.8rem;
+  border-radius: 6px 0 0 0;
+  margin: -0.49rem 0 0 2.4rem;
+  font-size: 1.8rem;
+}
+.mdc-list-item__graphic.vclose {
+  right: -1rem;
+  position: absolute;
+  top: 2.8rem;
+  color: rgba(159,175,188,1);
+}   
+.mdc-drawer__content {
+  padding: 9rem 2rem;
+}
+.mdc-list.bg-list-item {
+  border-radius: 8px;
+  background-color:$viasatwhite;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15);
+  padding: 3rem;
+}
+
+/* Safari fix */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+  .mdc-button.mdc-ripple-upgraded {
+      right: -7rem;
+  }
+  .mdc-list-item__graphic.vhelp-quote {
+      margin: -0.5rem 0 0 2.4rem;
+  }
+}}
+/* Firefox fix */
+@-moz-document url-prefix() {
+  .mdc-list-item__graphic.vhelp-quote {
+      margin: 0rem 0 0 1.4rem;
+      padding: 1.6rem 0.5rem 0.8rem;
+  }
+}
+/* IE11 Fix */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .mdc-button.vhelp {
+      padding: 0 0 0 2.5rem;
+      transform: rotate(-90deg);  /* Newer browsers (incl IE9) */
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; /* 0=0, 1=90, 2=180, 3=270 */
+      position: fixed; /* ie11 */
+      right: -8.4rem; /* ie11 */
+      margin-top: 23.6rem; /* ie11 */
+      color: $teal500;	
+      font-size: 1.4rem;	
+      font-weight: 600;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+      background-color:$viasatwhite;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mdc-button.vhelp {display:none;}
+}
+
+@media (max-width: 575px) {
+  .mdc-drawer {
+      width: 18rem;
+  }
+  .mdc-button.vhelp {
+      display: none;
+  }
+}
+}
+/* END ***** AEM Components - Need Help  - Sprint 1 */
+
+/* START ***** AEM Components - Footer  - Sprint 2 - https://jira.viasat.com/browse/WEBCON-859 */
+
+
+.outer-wrapper {
+
+  max-width: 1920px;
+  margin: 0px auto;
+}
+
+
+.inner-wrapper {
+max-width: 1200px;
+margin: 0px auto;
+  box-sizing: border-box;
+
+  @media (max-width: 1199px) {
+
+      max-width: 768px;
+
+  }
+  
+   @media (max-width: 767px) {
+
+      max-width: 100%;
+
+  }
+
+}
+
+
+.mdc-layout-grid {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+
+
+footer {
+   background-color:$gray800;
+
+  
+  .footer-top{
+       height: 80px;
+       background-image: linear-gradient(to right, $teal500 0%, $blue700);
+      .footer-top-social {
+          
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: inherit;
+          
+          ul.footer-ul-social-media {
+              display: flex;
+              list-style: none;
+              margin-top: 0px;
+              margin-bottom:0px;
+              padding-left: 0px;
+
+              li {
+                  width: 24px;
+                  height: 24px;
+                  margin-right: 42px;
+                  cursor: pointer;
+                  
+                  &:last-child {
+                      margin-right: 0px;
+                  }
+                  
+                  @media (max-width: 767px) {
+                      margin-right:25px;
+                  }
+              }
+          }
+      }
+  }
+  
+  .footer-middle {
+    //  overflow:hidden;
+      padding-top: 50px;
+      
+      h5{  
+          font-size: 1.4rem;
+          color: $viasatwhite;
+          font-family: $SourceSansPro;
+          margin-top: 0px;
+          margin-bottom: 0px;
+             text-transform: capitalize;
+          font-weight: bold;
+          letter-spacing: normal;
+          line-height: 1.6rem;
+          
+           @media (max-width: 1199px) {
+              text-align: center;
+          }
+         
+      }
+      ul.footer-ul-nav {
+          list-style: none;
+
+          font-size: 1.4rem;
+          line-height: 1.29;
+           color: $gray400;
+          margin-top: 28px;
+          margin-bottom:0px ;
+         padding-left: 0px;
+
+          li {
+              margin-bottom:12px; //20px? check the fonts and make it the correct one?
+
+              &:last-child {
+                  margin-bottom: 0px;
+              }
+
+              a {
+                   text-decoration: none;
+                 color: $gray400;
+              }
+          }
+          
+          @media (max-width: 1199px) {
+              text-align: center;
+          }
+          
+          
+      }
+      
+      .open-close-list {
+          i {
+              display: none;
+          }
+      }
+      //show and hide for mobile nav
+      @media (max-width:767px) {
+          .footer-nav-wrapper {
+              grid-gap: 0px;
+
+              
+              .open-close-list {
+              min-height: 52px;    
+              border-bottom: 1px solid $gray600;  
+              position: relative;
+                  
+                  h5 {
+                      font-family: $uniNeue;
+                      font-size: 1.4rem;	
+                      letter-spacing: 00.5rem;	
+                      line-height: 1.5rem;
+                      text-transform: uppercase;
+                      text-align: left; 
+                      padding-top: 20px;
+               
+                      letter-spacing: .05rem;
+   
+                      
+                     
+                  }
+                  
+
+                  ul.footer-ul-nav {
+                      display: none;
+                      text-align: left;
+                      margin-bottom: 28px;
+                  }
+                  
+                  i {
+                      display: block;
+                      color: $viasatwhite;
+                      font-size: 2.4rem;
+                      position: absolute;
+                      top: 15px;
+                      right: 0px;
+                      transform-origin: center center;
+                  }
+                  
+                  &.show-hide {
+                      
+                      ul.footer-ul-nav {
+                          display: block;
+                      }
+                      
+                      i {
+                          transform: rotate(180deg);
+                      }
+                      
+                  }
+              }
+          }    
+      }
+      
+      .footer-middle-info {
+
+          @media (max-width: 1199px) {
+              border-top: 1px solid $teal600;
+              padding-top: 30px;
+          }
+          
+           @media (max-width: 767px) {
+              border-top: none;
+              padding-top: 0px;
+          }
+          
+      }
+  }
+@media screen and (min-width:980px) and (max-width:1199px){
+.footer-middle.inner-wrapper {
+  
+  max-width:970px;
+}
+.footer-middle-info {min-width:440px;}
+
+
+}
+  .footer-bottom {
+     // height: 121px;
+      
+      margin-top: 48px;
+      
+      @media (max-width: 1199px) {
+              margin-top: 20px;
+          }
+      
+      .mdc-layout-grid__inner {
+          border-top: 1px solid $teal600;
+      }
+      
+      .mdc-layout-grid__inner.footer-customer-support {
+          border-top: 1px solid $gray600;
+          padding-top: 35px;
+          padding-bottom: 35px;
+          box-sizing: border-box;
+      }
+      
+      .footer-bottom-info {
+          height: 121px;
+          display: flex;
+          align-items: center;
+          
+           @media (max-width: 767px) {
+             flex-direction: column;
+              justify-content: center;
+               height: auto;
+          }
+
+              
+          .footer-logo {
+                  
+              width: 90px;
+              height: 30px;
+              margin-bottom: 20px;
+              margin-right: 28px;
+              
+               @media (max-width: 767px) {
+                   margin-top: 25px;
+                   margin-bottom: 25px;
+                   margin-right: 0px;
+              }
+              
+            }
+          
+          .footer-bottom-info-txt {
+              color: $gray500;
+              font-size: 1.4rem;
+              
+              a{
+                  text-decoration: none;
+                   color: $gray500;
+              }
+              
+              span {
+                  margin-right: 16px;
+                  
+                  
+                  
+                  &:last-child {
+                      margin-right: 0px;
+                  }
+              }
+          }
+      }
+      
+      .footer-bottom-change-lang {
+          
+          display: flex;
+          align-items: center;
+          
+          .flag-lang {
+              width:32px;
+              height: 32px;
+              border-radius: 50%;
+              background: red;
+              margin-right: 15px;
+          }
+          
+          .txt-change-lang {
+              font-size:1.4rem;
+              
+              
+              a {
+                  text-decoration: none;
+                  color: $gray400;
+              }
+          }
+          
+      }
+     
+      
+  }
+  
+}
+
+@media (max-width: 1199px) {
+  .hidden-tablet {
+      display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-bottom-change-lang {padding-bottom: 20px;}
+  .hidden-phone {
+      display: none;
+  }
+   .show-tablet {
+      display: block;
+  }
+}
+
+
+/* END ***** AEM Components - Footer  - Sprint 2 */
+
+
+/* START ***** AEM Components - Plans Tiles - Sprint 3 - https://jira.viasat.com/browse/WEBCON-865 */
+
+
+.vtiles-products {
+  min-height: 345px;
+  max-width: 240px;
+  background-color: $viasatwhite;
+  box-shadow: 0 10px 60px -3px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  
+    @media (max-width: 767px) {
+          max-width: 263px;
+      }
+  
+  
+  .wrapper-tile {
+      padding: 10px 10px 25px 10px;  
+      
+          ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+          }
+          ul li {
+              margin: 0;
+              padding: 0;
+          }
+          ul li::before {
+              content: '•';
+              margin-right: 5px;
+          }
+      
+      
+      .vtile-header {
+          height: 128px; 
+          border-radius: 8px;
+          background: linear-gradient(270deg, $blue400 0.02%, $blue600 100%);
+          display: flex;
+          flex-direction: column;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          
+          .vtile-header-txt {
+              margin-top: auto;
+              
+              p {
+                  align-self: flex-end;
+                  color: $blue200;
+                  font-weight: normal;
+                  margin-bottom: 5px;
+              }
+              h3 {
+                    align-self: flex-end;
+                  color: $viasatwhite;
+              }
+          }
+      }
+      
+      .vtile-content {
+         min-height: 135px; 
+          box-sizing: border-box;
+          padding: 20px 20px 0px 20px;
+          
+          h3.heavy {
+              color:$blue500;
+          }
+          
+          
+          ul {
+           
+              margin: 7px 0px;
+             
+              margin-block-start: 0px;
+              margin-block-end: 0px;
+              margin-inline-start: 0px;
+              margin-inline-end: 0px;
+              padding-inline-start: 0px;
+               padding:6px 0 0 0 ; 
+              
+              li.small {
+                  font-weight: normal; 
+                    line-height: 18px;
+                  margin-bottom: 2px;
+              }
+          }
+      }
+      
+      .vtile-footer {
+          text-align: center;
+          padding-top:20px;
+      }
+      
+  }
+  
+        &.vtiles-color-blue {
+            
+          .vtile-header {
+              background: linear-gradient(270deg, $blue400 0.02%, $blue600 100%);
+              
+              .vtile-header-txt {
+                   p {
+                      color: $blue200;
+                  }
+              }
+          }
+          
+          .vtile-content { 
+          
+              h3.heavy {
+                  color:$blue500;
+              }
+          }
+      }
+  
+   &.vtiles-color-green {
+            
+          .vtile-header {
+              background: linear-gradient(308.17deg, $green300 0.02%, $green600 100%);
+  
+              
+              .vtile-header-txt {
+                   p {
+                      color: $green200;
+                  }
+              }
+          }
+          
+          .vtile-content { 
+          
+              h3.heavy {
+                  color:$green400;
+              }
+          }
+       
+       .vtile-footer {
+           .vbtn-primay-green.vbtn.vbtn-dark {
+               color:$viasatwhite;
+           }
+       }
+      }
+  
+  &.vtile-img-bkg {
+      
+      max-width: 263px;
+      
+       .vtile-header {
+          height: 175px; 
+          background: linear-gradient(226.11deg, rgba(20,185,255,0.2) 0.02%, rgba(0,110,173,0.6) 100%), url('tile-bkg.jpg') center center;
+          background-size: cover;
+          padding: 10px;
+          
+          .vtile-header-txt {
+              margin-top: auto;
+              
+           
+              p.h1 {
+                    align-self: flex-end;
+                  color: $viasatwhite;
+                  line-height: 35px;
+                  
+                  sup {
+                      font-size: 24px;
+                      position: relative;
+                      top:5px;
+                  }
+                  .cents {
+                      font-size: 25px;
+                  }
+              }
+          }
+      }
+      
+      .vtile-content {
+         min-height:auto; 
+          padding: 20px 10px 0px 10px;
+          
+          h5 {
+              font-weight: bold;
+          }
+          
+          p {
+              font-size: 14px;	
+              line-height: 18px; 
+              margin: 10px 0px;
+              
+              a {
+                  color: $blue600;
+              }
+          }
+          
+      }
+      
+      &.vtiles-color-blue {
+           .vtile-header {
+          
+                background: linear-gradient(226.11deg, rgba(20,185,255,0.2) 0.02%, rgba(0,110,173,0.6) 100%), url('../img/tile-bkg.jpg') center center;
+                background-size: cover;
+          }
+      }
+      
+      &.vtiles-color-green {
+          
+          .vtile-header {
+          
+                background: linear-gradient(224.39deg, rgba(190,215,51,0.2) 0%, rgba(94,162,21,0.6) 100%), url('../img/tile-bkg.jpg') center center;
+               background-size: cover;
+          }
+          
+      }
+  }
+}
+
+/* END ***** AEM Components - Plans Tiles - Sprint 3 */
+
+/* START ***** AEM Components - Credibility Header - Sprint 3 - https://jira.viasat.com/browse/WEBCON-871 */
+
+
+.credibility-header {padding-top:125px !important;padding-bottom:0 !important;text-align:center;}
+
+.credheader {background: linear-gradient(0deg,$viasatwhite 0.02%, $gray100 100%);overflow-x:hidden;}
+
+.credheader article.preview .line {background-color:
+  $green400 !important;}
+
+.vtiles-logos {padding-top:35px;overflow:hidden;}
+
+.vfive-column-tile {
+  
+  position: relative;
+  width: 234px;
+  min-height:100px;
+  color:$gray700;
+  box-sizing: border-box;
+  float: left;
+
+  margin: 0; }
+
+  .wrapper-tile-arrows {text-align:left;}
+
+  article.preview .line {margin-left:auto;margin-right:auto;}
+
+ .arrows {padding:12px;margin:0; cursor: pointer;margin-top:12px;}
+
+ .arrows:hover .tile-circle i {
+  color: $teal600;
+}
+
+.arrows:hover .tile-circle {
+  border: 2px solid $teal600;
+}
+.arrows:hover {padding:11px;}
+    
+  .wrapper-tile-arrows {
+    /*display: none;*/
+    clear: both;
+    
+  }
+  .multi-column-wrapper-tile {
+    display: inline-block;
+    box-sizing: unset !important;
+  }
+  .multi-column-wrapper-tile .tile-circle {
+    
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid $teal500;
+      clear: both;
+      
+     
+      /*            display: flex;
+              align-items: center;
+              justify-content: center;*/ }
+  
+    .multi-column-wrapper-tile .tile-circle i {
+        font-size: 1.2rem;
+        color: $teal500;
+        position: relative;
+        top: -1px;
+        width: 23px;
+        text-align: center; }
+    
+
+    @media (min-width: 1024px) {  
+      .credibility-header {padding-top:0 !important;}
+      .vfive-column-tile:nth-child(1){text-align: left;}
+      .vfive-column-tile:nth-child(5){text-align: right;}
+      .wrapper-tile-arrows {display: block;}
+      }
+    
+      @media (max-width: 1184px) {  
+        .vfive-column-tile:nth-child(5) {
+            display: none;
+          }
+          
+      }
+      
+      @media (max-width: 951px) {  
+        .vfive-column-tile:nth-child(4),.vfive-column-tile:nth-child(5) {
+            display: none;
+          }
+          
+      }
+
+      @media (max-width:768px){
+        .credibility-header {padding-top:0 !important;}
+        .vfive-column-tile {max-width:256px;}
+        .vfive-column-tile img {max-width:70%;}
+        .vtiles-logos {padding-top:10px;}
+        .credheader .h2 {font-size:2.4rem;}
+      }
+      
+    @media (max-width:575px){
+      .credibility-header {padding-top:90px !important;}
+      .vfive-column-tile {max-width:96px;}
+      .vfive-column-tile img {max-width:80%;}
+      .vtiles-logos {padding-top:40px;}
+    }
+
+/* END ***** AEM Components - Credibility Header - Sprint 3 */
+
+/* START ***** AEM Components - Three Column Tiles - Sprint 3 - https://jira.viasat.com/browse/WEBCON-869 */
+
+
+.vthree-column-tile {
+  border: 10px solid $viasatwhite;
+  border-radius: 8px;
+  box-shadow: 0 10px 60px -3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 360px;
+  width: 354px;
+  color: $gray700;
+  box-sizing: border-box;
+  float: left;
+  
+  margin: 15px; }
+  .vthree-column-tile p {
+    font-size: 1.6rem;
+    text-align:left;
+  }
+  .vthree-column-tile .tile-icon {
+    text-align:left;
+    padding-top:15px;
+  }
+  @media (max-width: 1150px) {
+    .vthree-column-tile:nth-child(4) {
+      display: none;
+    }
+    .vthree-column-tile {
+      width:380px;
+      }
+  }
+  
+  @media (max-width: 767px) {
+    .vthree-column-tile {
+        max-width: 270px;
+        /*width: 84.5%;*/
+        height: 433px;
+    }
+      .vthree-column-tile:nth-child(3) {
+        display: none;
+      }
+  }
+.vthree-column-tile .vtile-bkg {
+    border-radius: 6px;
+    top: 0px;
+    position: absolute;
+    background-color:$viasatwhite;
+    left: 0px;
+    width: 100%;
+    height: 100%; }
+    @media (max-width: 767px) {
+    .vthree-column-tile .vtile-bkg {
+        background-position: top center; } }
+.vthree-column-tile .wrapper-tile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box; }
+  .vthree-column-tile .wrapper-tile h3 {
+      font-size: 28px;
+      line-height: 35px;
+      font-family: "uni_neueheavy", "Helvetica Neue", "Helvetica Extra Bold", "Arial Extra Bold", sans-serif;
+      font-weight: 900;
+      margin: 0px 0px 25px 0px;
+      color: $viasatwhite; }
+      @media (max-width: 1199px) {
+      .vthree-column-tile .wrapper-tile h3 {
+          font-size: 14px;
+          font-weight: 900;
+          letter-spacing: 0.5px;
+          line-height: 18px;
+          margin: 0px 0px 10px 0px; } }
+.green500 .preview .line {
+  background-color: $green300;
+}
+  .wrapper-tile-arrows {
+    display: block;
+    clear: both;
+    padding-top: 20px;
+  }
+
+  
+.vthree-column-tile .wrapper-tile-hover {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background: rgba(62, 193, 190, 0.9); }
+  .vthree-column-tile .wrapper-tile-hover h5 {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.44px;
+      line-height: 20px;
+      font-family: "uni_neueheavy", "Helvetica Neue", "Helvetica Extra Bold", "Arial Extra Bold", sans-serif;
+      margin-top: 0px;
+      margin-bottom: 33px;
+      color: $viasatwhite; }
+  .vthree-column-tile .wrapper-tile-hover p {
+      margin: 0px;
+      line-height: 28px;
+      align-self: stretch; }
+  .vthree-column-tile .wrapper-tile-hover button {
+      margin-top: 37px; }
+    @media (max-width: 1199px) {
+    .vthree-column-tile .wrapper-tile-hover {
+        padding: 5px 10px; }
+      .vthree-column-tile .wrapper-tile-hover h5 {
+          font-size: 14px;
+          line-height: 14px;
+          margin-bottom: 10px; }
+      .vthree-column-tile .wrapper-tile-hover p {
+          font-size: 12px;
+          margin: 0px;
+          line-height: 16px; }
+      .vthree-column-tile .wrapper-tile-hover button {
+          margin-top: 15px;
+          margin-bottom: 0px; } }
+
+/* END ***** AEM Components - Three Column Tiles - Sprint 3 */
+
+/* START ***** AEM Components - Customer Support Footer - Sprint 6 - https://jira.viasat.com/browse/WEBCON-1136 */
+.customer-support-footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	// background-color: black;
+	
+	// Helper class
+	.mr-20 {
+		margin-right: 20px;
+	}
+	
+	h4 {
+		font-size: 2.2rem;
+		color: $viasatwhite;
+		margin-right: 20px;
+		font-weight: normal;
+	}
+	.mdc-select {
+		width: 360px;
+		
+	}
+	@media ( min-width: 0 ) and ( max-width: 1199px ) { // Tablate 
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		h4 {
+			font-size: 2.2rem;
+			color: $viasatwhite;
+			margin: 0 0 20px 0;
+		}
+		.mdc-select {
+			margin: 0 0 20px 0;
+			width: 100%;
+		}
+		.go-button {
+			align-self: flex-end;
+		}
+
+	}
+}
+/* END ***** AEM Components - Customer Support Footer - Sprint 6 */
+
+/* START ***** AEM Components - Artile Tile Lising with Image */
+.articles {padding-top:20px;background: linear-gradient(0deg, $viasatwhite 0.02%, $gray100 100%);}
+
+
+.vtiles-articles {
+   
+   /* max-width:263px;
+    max-height:350px;*/
+    a.vlnk{color:$blue600;}
+
+    .vtile-header a.vlnk {line-height:18px;}
+    
+    &.featured{max-width:100%;min-height:540px;}
+
+   
+    @media (max-width: 767px) {
+        &.vtiles-articles {max-width:100%;}
+        }
+  
+    background-color: $viasatwhite;
+    box-shadow: 0 10px 60px -3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+    
+    .wrapper-tile {
+        padding: 15px 10px 25px 10px;  
+        overflow:hidden;
+        
+        .vtile-header {
+           
+            padding: 0;
+            box-sizing: border-box;
+            color:$blue600;
+            line-height:1.8rem;
+            a {text-decoration: none;}
+        }
+
+        
+        
+        .vtile-content {
+           /*min-height: 134px; */
+            box-sizing: border-box;
+            padding: 15px 20px 0px 20px;
+            
+            h4{font-size:2.2rem;color:$gray700;}
+
+        }
+        
+       
+        
+    }
+    &.featured .wrapper-tile {padding-top:10px;}
+
+    
+  }
+  
+.articles {
+    .h1.heavy {font-weight:900;}
+      .shortBlueLeft {
+    border: 2px solid $teal500;
+    width: 100px;
+    margin: 20px 0 60px 0;
+    }
+    .tag-blog {padding-left:10px;color:$viasatwhite;font-size:12px;line-height:28px;height: 28px;width: 90px;background-color: $gray400;border-radius:6px;margin-left:auto;}
+    .feature-meta {
+        width:100%;display:flex;margin-bottom:20px;color:$blue600;line-height:1.8rem;
+     a {text-decoration: none;}
+     
+    }
+    
+   
+    
+
+    .wrapper-tile-arrows {margin-left:-10px;padding:10px;}
+    @media screen and (max-width:1200px) and (min-width:768px){
+    .mdc-layout-grid__cell--span-6:nth-child(3),.mdc-layout-grid__cell--span-6:nth-child(4) {
+        display:none;
+      }
+      .featured .wrapper-tile {padding:0 0 20px 0;}
+    }
+.leftbig h4 {font-size:2rem;line-height:3.1rem;color:
+    $gray700;}
+.rightsmall {
+    .wrapper-tile {height:215px;}
+    .vtile-header {padding:0 20px;}
+   
+}
+.vtiles-articles.featured {max-height:530px;}
+}
+
+.featured-img {background-image:url('../img/article-temp-image.png');height:250px;min-width:100%;border-radius:6px 6px 0 0;background-size:cover;background-repeat:no-repeat;margin-bottom:10px;}
+
+@media screen and (max-width:767px){
+    .featured-img {background-size:cover;}
+    .article-title-search {display:none;}
+    .tag-blog {display:none;}
+    .vtiles-articles.featured .wrapper-tile {padding:0 0 20px 0;}
+}
+
+/* Phone / Narrow */
+@media screen and (max-width:575px){
+   .vtiles-articles h4 {margin-bottom:10px;line-height: 31px;font-size:2.2rem;}
+   .featured h4 {margin-bottom:20px;}
+   .featured-img {height:170px;} 
+    
+}
+@media screen and (min-width:1199px){
+.articles .mdc-layout-grid {padding-left:130px;padding-top:20px;}
+}
+/* START ***** AEM Components - Artile Tile Lising with Image */
+
+/* START ***** AEM Components - MISC Styles */
+
+.vdark-bkg {
+    background: $viasatgrey;
+    padding: 25px;
+    h1, h2, h3 {
+        color:$viasatwhite;
+    }
+}
+
+.teal-bkg {
+    background: $teal600;
+    padding: 25px;
+    h1, h2, h3 {
+        color:$viasatwhite;
+    }
+}
+
+.multi-column-wrapper-tile .tile-circle i {top:-2px;}
+
+.vtxt-left {
+    text-align: left;
+}
+.vtxt-center {
+    text-align: center;
+}
+.vtxt-right {
+    text-align: right;
+}
+.vline {
+
+    &::after {
+      content: " ";
+      background-color: $teal500;
+      width: 98px;
+      height: 4px;
+      display: block;
+      margin-top: 21px;
+      margin-bottom: 30px;
+        
+     @media (max-width: 767px) {
+          width: 75px;
+          height: 3px;
+          margin-top: 18px;
+          margin-bottom: 15px;
+      }  
+    }
+    
+    &.vline-teal100::after {
+        background-color: $teal100;
+    }
+    &.vline-teal200::after {
+        background-color: $teal200;
+    }
+    &.vline-teal300::after {
+        background-color: $teal300;
+    }
+    &.vline-teal400::after {
+        background-color: $teal400;
+    }
+    &.vline-teal500::after {
+        background-color: $teal500;
+    }
+    &.vline-teal600::after {
+        background-color: $teal600;
+    }
+    &.vline-teal700::after {
+        background-color: $teal700;
+    }
+    &.vline-teal800::after {
+        background-color: $teal800;
+    }
+    
+    &.vline-green100::after {
+        background-color: $green100;
+    }
+    &.vline-green200::after {
+        background-color: $green200;
+    }
+    &.vline-green300::after {
+        background-color: $green300;
+    }
+    &.vline-green400::after {
+        background-color: $green400;
+    }
+    &.vline-green500::after {
+        background-color: $green500;
+    }
+    &.vline-green600::after {
+        background-color: $green600;
+    }
+    &.vline-green700::after {
+        background-color: $green700;
+    }
+    
+    &.vline-blue100::after {
+        background-color: $blue100;
+    }
+    &.vline-blue200::after {
+        background-color: $blue200;
+    }
+    &.vline-blue300::after {
+        background-color: $blue300;
+    }
+    &.vline-blue400::after {
+        background-color: $blue400;
+    }
+    &.vline-blue500::after {
+        background-color: $blue500;
+    }
+    &.vline-blue600::after {
+        background-color: $blue600;
+    }
+    &.vline-blue700::after {
+        background-color: $blue700;
+    }
+    &.vline-blue800::after {
+        background-color: $blue800;
+    }
+    &.vline-white::after {
+      background-color: $viasatwhite;
+  }
+    
+}
+.vtxt-left {
+ 
+    .vline {
+
+        &::after {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+}
+.vtxt-center {
+    .vline {
+
+        &::after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+.vtxt-right {
+    .vline {
+
+        &::after {
+            margin-left: auto;
+            margin-right: 0px;
+        }
+    }
+}
+
+//BRAD WAS HERE - End
+
+/* Merge Override */
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+.vtoast-bar {
+  z-index: 999994;
+}
+.banner.full-content {
+  padding-bottom: 100px;
+}
+.vhelp {
+  z-index: 999999;
+}
+.mdc-drawer {
+  z-index: 999995;
+}
+.help-widget-container {
+  .mdc-drawer {
+    z-index: 9999999;
+  }
+}
+
+
+/* IE10+ specific styles go here */
+@media screen and (-ms-high-contrast: active) {
+  body {
+    overflow-y: hidden;
+  }
+  .vtoast-bar {
+    p {
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+  }
+  article.preview {
+    padding-top: 40px !important;
+  }
+  .vtiles-icons {
+    i {
+      margin-top: 10px;
+    }
+  }
+  .articles {
+    max-width: 1440px;
+    margin: 0 auto;
+    .mdc-layout-grid {
+      padding-top: 20px;
+    }
+    .h1.heavy {
+      min-width: 540px;
+    }
+    .select-article {
+      float: left;
+      margin-left: 350px;
+      min-width: 300px;
+    }
+  }
+  .vtiles-articles {
+    margin: 0 0 20px 20px;
+  }
+}
+@media screen and (-ms-high-contrast: none) {
+  body {
+    overflow-y: hidden;
+  }
+  .vtoast-bar {
+    p {
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+  }
+  article.preview {
+    padding-top: 40px !important;
+  }
+  .vtiles-icons {
+    i {
+      margin-top: 10px;
+    }
+  }
+  .articles {
+    max-width: 1440px;
+    margin: 0 auto;
+    .mdc-layout-grid {
+      padding-top: 20px;
+    }
+    .h1.heavy {
+      min-width: 540px;
+    }
+    .select-article {
+      float: left;
+      margin-left: 350px;
+      min-width: 300px;
+    }
+  }
+  .vtiles-articles {
+    margin: 0 0 20px 20px;
+  }
+}
