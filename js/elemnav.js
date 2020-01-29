@@ -1,4 +1,3 @@
-fakefunc()
 function planTemplate() {
 			var devlnk ="";
 /* Demo Server */
