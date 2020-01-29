@@ -1,4 +1,5 @@
-		function planTemplate() {
+fakefunc()
+function planTemplate() {
 			var devlnk ="";
 /* Demo Server */
 			var srvurl = "/corporate/webcon/aem-components/";
