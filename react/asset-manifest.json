@@ -1,15 +1,24 @@
 {
-  "main.css": "/webdev-sample-qa/react/static/css/main.e9c30108.chunk.css",
-  "main.js": "/webdev-sample-qa/react/static/js/main.7e67f697.chunk.js",
-  "main.js.map": "/webdev-sample-qa/react/static/js/main.7e67f697.chunk.js.map",
-  "runtime~main.js": "/webdev-sample-qa/react/static/js/runtime~main.e0b30fd0.js",
-  "runtime~main.js.map": "/webdev-sample-qa/react/static/js/runtime~main.e0b30fd0.js.map",
-  "static/js/2.9b549d02.chunk.js": "/webdev-sample-qa/react/static/js/2.9b549d02.chunk.js",
-  "static/js/2.9b549d02.chunk.js.map": "/webdev-sample-qa/react/static/js/2.9b549d02.chunk.js.map",
-  "index.html": "/webdev-sample-qa/react/index.html",
-  "precache-manifest.0717f9dd0d5afd335f4ef0145b7f38ed.js": "/webdev-sample-qa/react/precache-manifest.0717f9dd0d5afd335f4ef0145b7f38ed.js",
-  "service-worker.js": "/webdev-sample-qa/react/service-worker.js",
-  "static/css/main.e9c30108.chunk.css.map": "/webdev-sample-qa/react/static/css/main.e9c30108.chunk.css.map",
-  "static/media/styles.css": "/webdev-sample-qa/react/static/media/unineue-book-webfont.ce94bc79.eot",
-  "static/media/viasat-logo.svg": "/webdev-sample-qa/react/static/media/viasat-logo.454c512f.svg"
+  "files": {
+    "main.css": "/webdev-sample-qa/react/static/css/main.ab0a9413.chunk.css",
+    "main.js": "/webdev-sample-qa/react/static/js/main.fe46753f.chunk.js",
+    "main.js.map": "/webdev-sample-qa/react/static/js/main.fe46753f.chunk.js.map",
+    "runtime-main.js": "/webdev-sample-qa/react/static/js/runtime-main.ce40c2c5.js",
+    "runtime-main.js.map": "/webdev-sample-qa/react/static/js/runtime-main.ce40c2c5.js.map",
+    "static/js/2.c41685d5.chunk.js": "/webdev-sample-qa/react/static/js/2.c41685d5.chunk.js",
+    "static/js/2.c41685d5.chunk.js.map": "/webdev-sample-qa/react/static/js/2.c41685d5.chunk.js.map",
+    "index.html": "/webdev-sample-qa/react/index.html",
+    "precache-manifest.ad2069e2660921e0fb40e4a722853688.js": "/webdev-sample-qa/react/precache-manifest.ad2069e2660921e0fb40e4a722853688.js",
+    "service-worker.js": "/webdev-sample-qa/react/service-worker.js",
+    "static/css/main.ab0a9413.chunk.css.map": "/webdev-sample-qa/react/static/css/main.ab0a9413.chunk.css.map",
+    "static/js/2.c41685d5.chunk.js.LICENSE.txt": "/webdev-sample-qa/react/static/js/2.c41685d5.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/webdev-sample-qa/react/static/media/unineue-book-webfont.ce94bc79.eot",
+    "static/media/viasat-logo.svg": "/webdev-sample-qa/react/static/media/viasat-logo.454c512f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce40c2c5.js",
+    "static/js/2.c41685d5.chunk.js",
+    "static/css/main.ab0a9413.chunk.css",
+    "static/js/main.fe46753f.chunk.js"
+  ]
 }
