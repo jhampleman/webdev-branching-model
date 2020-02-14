@@ -19,7 +19,7 @@
             <p>The right-hand side of this page is built in React JS.  It is a "2 page" component.  Below are all the features and notes about related structure and files.</p>
             <ul class="featlist">
                 <li><strong>index.js</strong> - The main file.<ul><li><strong>"App Title"</strong> is a static class</li><li><strong>"Page Title"</strong> is a Dynamic title</li><li><strong>Options A,B,C</strong> show an array using Mapping and Reduce with Sum function</li>
-                    <li><strong>"Show/Hide Form"</strong> button opens up a form with fields showing different Form functions<ul><li>Form shows simple Submits and User/Email form shows "required" Email field.</li><li>The field from Sessions.js demonstrates browser caching a variable (Session)</li></ul></li><li><strong>"Go to Page 2"</strong> link demonstrates React Router to move between React pages.<ul><li>Function Component Example to illustrate how to pass functions between components as props</li></ul></li>
+                    <li><strong>"Show/Hide Form"</strong> button opens up a form with fields showing different Form functions<ul><li>Form shows simple Submits and User/Email form shows "required" Email field.</li><li>The field from Sessions.js demonstrates browser caching a variable (Session, Cookie)</li></ul></li><li><strong>"Go to Page 2"</strong> link demonstrates React Router to move between React pages.<ul><li>Function Component Example to illustrate how to pass functions between components as props</li></ul></li>
                     <li><strong>useEffect</strong> - Demonstrates Hooks to control State</li>
                     <li><strong>Redux Demo</strong> - Uses "Click Me" button to show how Redux manages State</li>
                     <li><strong>Apollo</strong> - NOT used.  A version exists where Apollo is used to pull in Github GraphQL data but was removed for security (token) reasons.  You may see Apollo or Github references commented out.</li>
@@ -29,8 +29,9 @@
 
                 <li><strong>Button.js</strong> - Button code and click events / states used in index.js Buttons</li>
                 <li><strong>Button.spec.js</strong> - Enzyme tests (Dev only) that check Button code</li>
-                <li><strong>Form.js</strong> - Constains Form elements when show/hide form button clicked.</li>
+                <li><strong>Form.js</strong> - Contains Form elements when show/hide form button clicked.</li>
                 <li><strong>Form.spec.js</strong> - Enzyme tests (Dev only) that check Form code<ul><li>Includes "Snapshot" test example</li></ul></li>
+                <li><strong>FormErrors.js</strong> - Checks form fields for errors / required fields</li>
                 <li><strong>FunctionComponent.js</strong> - Code for Function Component Example on Page 2</li>
                 <li><strong>Page2.js</strong> - Code for React "Page 2" using Browser Router</li>
                 <li><strong>Profile.js</strong> - Was pulling Profile info from Github but not in use for Token/Security Reasons.  See "Apollo" note above.</li>
