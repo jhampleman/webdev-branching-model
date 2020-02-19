@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 58 (101010) - https://sketch.com -->
+    <title>01CBC7D6-A936-42B8-B28A-F1B73865E40C</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="25.3333333 8.54666667 23.4533333 6.66666667 16 14.12 8.54666667 6.66666667 6.66666667 8.54666667 14.12 16 6.66666667 23.4533333 8.54666667 25.3333333 16 17.88 23.4533333 25.3333333 25.3333333 23.4533333 17.88 16"></polygon>
+    </defs>
+    <g id="WC-272-/-1440px-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-WC-272-Modal-Content" transform="translate(-1035.000000, -231.000000)">
+            <g id="Modal_1-Modal/1440px/Title_Text_Close" transform="translate(346.000000, 200.000000)">
+                <g id="Close-Content/ic_clear" transform="translate(683.000000, 25.000000)">
+                    <polygon id="Bounds" points="0 0 32 0 32 32 0 32"></polygon>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                    <g id="↳-🎨Color-Icon" mask="url(#mask-2)" fill="#C3CDD5">
+                        <rect id="●-Color" x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
