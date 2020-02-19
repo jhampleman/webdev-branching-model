@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/webdev-sample-qa/react/static/css/main.1d4e3b5b.chunk.css",
+    "main.css": "/webdev-sample-qa/react/static/css/main.fe9c4fcc.chunk.css",
     "main.js": "/webdev-sample-qa/react/static/js/main.fd91e108.chunk.js",
     "main.js.map": "/webdev-sample-qa/react/static/js/main.fd91e108.chunk.js.map",
     "runtime-main.js": "/webdev-sample-qa/react/static/js/runtime-main.ce40c2c5.js",
@@ -8,9 +8,9 @@
     "static/js/2.bee58009.chunk.js": "/webdev-sample-qa/react/static/js/2.bee58009.chunk.js",
     "static/js/2.bee58009.chunk.js.map": "/webdev-sample-qa/react/static/js/2.bee58009.chunk.js.map",
     "index.html": "/webdev-sample-qa/react/index.html",
-    "precache-manifest.5db0cd9d5a4f9cfb02b7a7fb2a329d21.js": "/webdev-sample-qa/react/precache-manifest.5db0cd9d5a4f9cfb02b7a7fb2a329d21.js",
+    "precache-manifest.c036d131cfaaff729e5b00ab6f3bef89.js": "/webdev-sample-qa/react/precache-manifest.c036d131cfaaff729e5b00ab6f3bef89.js",
     "service-worker.js": "/webdev-sample-qa/react/service-worker.js",
-    "static/css/main.1d4e3b5b.chunk.css.map": "/webdev-sample-qa/react/static/css/main.1d4e3b5b.chunk.css.map",
+    "static/css/main.fe9c4fcc.chunk.css.map": "/webdev-sample-qa/react/static/css/main.fe9c4fcc.chunk.css.map",
     "static/js/2.bee58009.chunk.js.LICENSE.txt": "/webdev-sample-qa/react/static/js/2.bee58009.chunk.js.LICENSE.txt",
     "static/media/icon_close.svg": "/webdev-sample-qa/react/static/media/icon_close.e818f580.svg",
     "static/media/styles.css": "/webdev-sample-qa/react/static/media/unineue-book-webfont.ce94bc79.eot",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.ce40c2c5.js",
     "static/js/2.bee58009.chunk.js",
-    "static/css/main.1d4e3b5b.chunk.css",
+    "static/css/main.fe9c4fcc.chunk.css",
     "static/js/main.fd91e108.chunk.js"
   ]
 }
